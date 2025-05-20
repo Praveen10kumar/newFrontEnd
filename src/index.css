@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-500: #3B82F6;
+    --color-primary-600: #2563EB;
+    --color-accent-500: #8B5CF6;
+    --color-secondary-600: #4B5563;
+    --color-secondary-800: #1E293B;
+  }
+}
+
+@layer utilities {
+  /* Define your custom utilities here */
+  .text-secondary-800 {
+    color: var(--color-secondary-800);
+  }
+  
+  .from-primary-600 {
+    --tw-gradient-from: var(--color-primary-600);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(37 99 235 / 0));
+  }
+  
+  .to-accent-500 {
+    --tw-gradient-to: var(--color-accent-500);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans;
+  color: var(--color-secondary-800);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent-500;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service-card {
+  @apply rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl;
+  transform: translateZ(0);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  @apply relative px-3 py-2 transition-colors;
+  color: var(--color-secondary-600);
+}
+
+.nav-link:hover {
+  color: var(--color-primary-600);
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300;
+  background-color: var(--color-primary-500);
+}
+
+.nav-link:hover::after, 
+.nav-link.active::after {
+  @apply w-full;
+}
+
