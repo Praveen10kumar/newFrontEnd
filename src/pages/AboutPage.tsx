@@ -6,48 +6,25 @@ import Banner from '../components/Banner';
 import ChatButton from '../components/ChatButton';
 
 const handleChatClick = () => {
-  console.log('Navigating to contact page');
   window.location.href = '/contact';
 };
 
 const AboutPage: React.FC = () => {
-  const bannerImage = "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+  const bannerImage =
+    'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
 
   const stats = [
-    { icon: <Clock size={28} />, value: "10+", label: "Years of Experience" },
-    { icon: <Users size={28} />, value: "100+", label: "Satisfied Clients" },
-    { icon: <Award size={28} />, value: "250+", label: "Projects Completed" },
-    { icon: <Globe size={28} />, value: "15+", label: "Countries Served" }
-  ];
-
-  const teamMembers = [
-    {
-      name: "Nitin Singhal",
-      position: "CEO & Founder",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      name: "Miguel parker",
-      position: "CTO",
-      image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      name: "Jack Sparrow",
-      position: "Design Director",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      name: "Jon Snow",
-      position: "Lead Developer",
-      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    }
+    { icon: <Clock size={28} />, value: '10+', label: 'Years of Experience' },
+    { icon: <Users size={28} />, value: '100+', label: 'Satisfied Clients' },
+    { icon: <Award size={28} />, value: '250+', label: 'Projects Completed' },
+    { icon: <Globe size={28} />, value: '15+', label: 'Countries Served' },
   ];
 
   return (
-    <div className="bg-gray-50">
-      <Banner 
-        title="About Singhal Nitin & Associates" 
-        subtitle="Get to know our company and our mission" 
+    <div className="bg-gray-50 text-gray-800">
+      <Banner
+        title="About Singhal Nitin & Associates"
+        subtitle="Get to know our company and our mission"
         backgroundImage={bannerImage}
         height="h-[50vh]"
       />
@@ -81,9 +58,9 @@ const AboutPage: React.FC = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <img 
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Team working together" 
+              <img
+                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Team working together"
                 className="rounded-lg shadow-xl w-full h-auto"
               />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-500 rounded-lg -z-10"></div>
@@ -104,7 +81,7 @@ const AboutPage: React.FC = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission & Values</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              At Innovate Solutions, we're guided by a set of core values that define who we are and how we work.
+              Transform your future goals by identifying profit-impacting aspects to build long-term business relationships.
             </p>
           </motion.div>
 
@@ -118,7 +95,7 @@ const AboutPage: React.FC = () => {
             >
               <h3 className="text-xl font-bold mb-4 text-primary-700">Our Mission</h3>
               <p className="text-gray-700">
-                To empower businesses through innovative technology solutions that drive growth, enhance efficiency, and create exceptional user experiences.
+                Continue transitioning from traditional business practices to holistic & technology-driven digitized processes.
               </p>
             </motion.div>
 
@@ -131,24 +108,26 @@ const AboutPage: React.FC = () => {
             >
               <h3 className="text-xl font-bold mb-4 text-primary-700">Our Vision</h3>
               <p className="text-gray-700">
-                To be the go-to partner for businesses seeking to thrive in the digital age, known for our technical excellence, creative thinking, and client-focused approach.
+                Remain relevant to all businesses & be the most trusted chartered accountant firm in Bangalore and India.
               </p>
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
-            {["Innovation", "Excellence", "Integrity", "Collaboration", "Client Focus", "Continuous Learning"].map((value, index) => (
-              <motion.div
-                key={value}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-accent-50 p-4 rounded-lg shadow-sm text-center"
-              >
-                <h4 className="font-medium text-primary-900">{value}</h4>
-              </motion.div>
-            ))}
+            {['Innovation', 'Excellence', 'Integrity', 'Collaboration', 'Client Focus', 'Continuous Learning'].map(
+              (value, index) => (
+                <motion.div
+                  key={value}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-accent-50 p-4 rounded-lg shadow-sm text-center"
+                >
+                  <h4 className="font-medium text-primary-900">{value}</h4>
+                </motion.div>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -166,9 +145,7 @@ const AboutPage: React.FC = () => {
                 className="text-center"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="bg-primary-800 p-3 rounded-full">
-                    {stat.icon}
-                  </div>
+                  <div className="bg-primary-800 p-3 rounded-full">{stat.icon}</div>
                 </div>
                 <div className="text-4xl font-bold mb-2">{stat.value}</div>
                 <div className="text-primary-200">{stat.label}</div>
@@ -178,45 +155,64 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-10 md:py-14 bg-gray-50">
-        <div className="container mx-auto px-4">
+      {/* ✅ New Leadership Section for CEO */}
+      <section className="py-10 md:py-14 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Meet the visionary behind Singhal Nitin & Associates.
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="w-full lg:w-[60%] mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Meet the talented individuals who drive our company forward.
-            </p>
+            <img
+              src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Nitin Singhal - CEO"
+              className="rounded-lg shadow-xl w-full h-auto object-cover"
+            />
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white hover:bg-accent-50 transition duration-300 rounded-lg overflow-hidden shadow-md"
-              >
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-64 object-cover object-center"
-                />
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-gray-600">{member.position}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-lg text-gray-800 w-full lg:w-[40%]"
+          >
+            <h3 className="text-2xl font-bold mb-2 text-primary-700">Nitin Singhal</h3>
+            <p className="text-md font-semibold mb-1">Chartered Accountant & Founder</p>
+            <p className="text-sm text-primary-600 mb-4">Certified QuickBooks ProAdvisor & Xero Advisor</p>
+            <p className="text-gray-700 text-sm leading-relaxed mb-2">
+              Nitin is a qualified Chartered Accountant with close to a decade of successful experience. He is also a CFA USA Level 2 candidate and a certified QuickBooks and Xero expert.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed mb-2">
+              Prior to starting his own CA firm, Nitin worked at PricewaterhouseCoopers, Mumbai and various local CA firms.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed mb-2">
+              Backed by his experience serving clients across the UK, US, Australia, and India, he is skilled in business transformation and professional advisory.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Nitin's interests include traveling abroad, working out, and entrepreneurship.
+            </p>
+          </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
+
 
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
@@ -229,7 +225,7 @@ const AboutPage: React.FC = () => {
           >
             <h3 className="text-xl font-bold mb-4 text-primary-700">Singhal Nitin & Associates Team</h3>
             <p className="text-gray-700">
-              Our team mainly includes graduates and post-graduate in accounting and finance streams, who have fantastic communication skills...
+              Our team mainly includes graduates and post-graduate in accounting and finance streams, who have fantastic communication skills. They hold a minimum experience of 2 years to 10 years in the industry. All our experts are highly trained, and they complete all the bookkeeping assignments with many hands of experts, and of course, they meet all the deadlines. Hence you can choose our team for all types of work. Our highly skilled team comprises graduate and post-graduate. They are well versed with English communication skills and have experience levels ranging from 2 years to 10 years in the industry. We have created a delivery team of highly trained accountants to carry out bookkeeping assignments with considerable hands of expertise and conversant with the latest guidelines.
             </p>
           </motion.div>
         </div>

@@ -23,111 +23,112 @@ const ServicesPage = () => {
   const bannerImage = "https://images.pexels.com/photos/3182774/pexels-photo-3182774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
   const services = [
-    {
-      icon: <Code size={48} className="text-primary-500" />,
-      title: "Full Time Service",
-      description: "Our Virtual CFO service partners you with a remote team of Accountants & CPAs to guide your business to success.",
-      fullDescription: "Our Virtual CFO service partners you up with a remote team of Accountants & CPAs who work with you to help guide your business to success. There is a lot of redundancy so nothing ever stops (even when someone is sick or takes a vacation). Service includes bank relationships, weekly meetings, forecasting, company-wide KPIs, and much more.",
-      points: [
-        "Custom website design and development",
-        "Progressive web applications (PWAs)",
-        "E-commerce solutions",
-        "Content management systems",
-        "API development and integration"
-      ]
-    },
-    {
-      icon: <Smartphone size={48} className="text-primary-500" />,
-      title: "Controller",
-      description: "Professional financial advice for growing businesses that can't afford a full-time Controller.",
-      fullDescription: "Our proactive Controller service partners you up with an experienced Controller who works with you to help guide your business to success. If you're a growing business that now needs professional financial advice, but can't afford a full-time Controller, our Controller Services are a perfect fit.",
-      points: [
-        "Native iOS and Android applications",
-        "Cross-platform development",
-        "Mobile UI/UX design",
-        "App maintenance and support",
-        "Performance optimization"
-      ]
-    },
-    {
-      icon: <LineChart size={48} className="text-primary-500" />,
-      title: "Transactional",
-      description: "Traditional accounting services including monthly financial statements and industry comparisons.",
-      fullDescription: "Our Transactional service provides you with traditional accounting services such as preparing your monthly financial statements –including balance sheets, industry financial comparisons, and more.",
-      points: [
-        "Digital transformation planning",
-        "Technology roadmapping",
-        "Competitive analysis",
-        "Market research and insights",
-        "Business process optimization"
-      ]
-    },
-    {
-      icon: <Cloud size={48} className="text-primary-500" />,
-      title: "Cloud Solutions",
-      description: "Secure, scalable cloud infrastructure and migration services.",
-      fullDescription: "We provide cloud infrastructure and migration services to help businesses leverage the scalability, reliability, and cost-effectiveness of cloud computing. Our cloud solutions are secure, scalable, and tailored to your specific needs.",
-      points: [
-        "Cloud infrastructure setup and management",
-        "Migration to cloud platforms",
-        "Serverless architecture",
-        "DevOps and continuous integration",
-        "Scalable cloud databases"
-      ]
-    },
-    {
-      icon: <Database size={48} className="text-primary-500" />,
-      title: "Data Analytics",
-      description: "Extract valuable insights from data with custom dashboards and reporting systems.",
-      fullDescription: "Our data analytics services help businesses extract valuable insights from their data to drive decision-making. We build custom dashboards, reporting systems, and data pipelines that transform raw data into actionable intelligence.",
-      points: [
-        "Business intelligence dashboards",
-        "Data visualization",
-        "Predictive analytics",
-        "Big data processing",
-        "Custom reporting solutions"
-      ]
-    },
-    {
-      icon: <Globe size={48} className="text-primary-500" />,
-      title: "Digital Marketing",
-      description: "Data-driven marketing campaigns that deliver measurable results.",
-      fullDescription: "We help businesses reach their target audience and generate leads through strategic digital marketing campaigns. Our data-driven approach ensures that your marketing efforts deliver measurable results.",
-      points: [
-        "Search engine optimization (SEO)",
-        "Pay-per-click (PPC) advertising",
-        "Social media marketing",
-        "Email marketing campaigns",
-        "Conversion rate optimization"
-      ]
-    },
-    {
-      icon: <ShieldCheck size={48} className="text-primary-500" />,
-      title: "Cybersecurity",
-      description: "Protect digital assets and sensitive information with robust security measures.",
-      fullDescription: "Our cybersecurity services help businesses protect their digital assets and sensitive information. We implement robust security measures and best practices to mitigate risks and ensure compliance with industry regulations.",
-      points: [
-        "Security assessments and audits",
-        "Vulnerability management",
-        "Secure application development",
-        "Data protection strategies",
-        "Security awareness training"
-      ]
-    },
-    {
-      icon: <Lightbulb size={48} className="text-primary-500" />,
-      title: "Innovation Consulting",
-      description: "Identify opportunities for innovation to stay ahead of the competition.",
-      fullDescription: "We help businesses identify opportunities for innovation and develop strategies to stay ahead of the competition. Our innovation consulting services combine creative thinking with technical expertise to drive growth and differentiation.",
-      points: [
-        "Innovation workshops and ideation",
-        "Emerging technology adoption",
-        "Proof of concept development",
-        "Digital product strategy",
-        "Research and development support"
-      ]
-    }
-  ];
+  {
+    icon: <Code size={48} className="text-primary-500" />,
+    title: "Virtual CFO",
+    description: "Strategic financial leadership without the cost of a full-time CFO.",
+    fullDescription: "Our Virtual CFO service gives you access to strategic financial guidance from experienced professionals. Ideal for growing businesses that need expert oversight on financial planning, forecasting, budgeting, and KPI tracking without hiring a full-time executive.",
+    points: [
+      "Cash flow forecasting",
+      "Budgeting and planning",
+      "Financial KPI development",
+      "Investor reporting",
+      "Monthly strategy sessions"
+    ]
+  },
+  {
+    icon: <Smartphone size={48} className="text-primary-500" />,
+    title: "Controller Services",
+    description: "Experienced Controllers to oversee your accounting operations.",
+    fullDescription: "Our Controller service provides accurate financial oversight and helps manage accounting teams, processes, and compliance. Ideal for businesses ready to upgrade from a bookkeeper to structured financial management.",
+    points: [
+      "Monthly close and reconciliations",
+      "Process improvement and documentation",
+      "Internal controls and compliance",
+      "Oversight of bookkeeping team",
+      "GAAP-compliant reporting"
+    ]
+  },
+  {
+    icon: <LineChart size={48} className="text-primary-500" />,
+    title: "Transactional Accounting",
+    description: "Reliable and accurate daily bookkeeping and financial records.",
+    fullDescription: "Our Transactional service ensures that your books are always up to date. We handle your routine financial entries, reconciliations, and reporting with accuracy and timeliness.",
+    points: [
+      "Accounts payable and receivable",
+      "Bank and credit card reconciliations",
+      "Monthly financial statements",
+      "Expense tracking",
+      "Industry benchmark comparisons"
+    ]
+  },
+  {
+    icon: <Cloud size={48} className="text-primary-500" />,
+    title: "Cloud Accounting Setup",
+    description: "Modern cloud-based accounting solutions tailored for your business.",
+    fullDescription: "We set up and optimize cloud accounting systems like QuickBooks Online and Xero, enabling secure, real-time access to your financials and improved workflow efficiency.",
+    points: [
+      "QuickBooks and Xero setup",
+      "Cloud system migration",
+      "App integrations and automations",
+      "User training and support",
+      "Custom chart of accounts"
+    ]
+  },
+  {
+    icon: <Database size={48} className="text-primary-500" />,
+    title: "Financial Reporting & Analysis",
+    description: "Insightful reports to support informed business decisions.",
+    fullDescription: "We provide detailed financial reporting and custom dashboards to help you understand performance, track trends, and make strategic decisions with confidence.",
+    points: [
+      "Monthly and quarterly reporting",
+      "Custom dashboards",
+      "Variance analysis",
+      "Cash flow reports",
+      "Performance trend insights"
+    ]
+  },
+  {
+    icon: <Globe size={48} className="text-primary-500" />,
+    title: "Tax Preparation & Planning",
+    description: "Strategic planning and accurate tax filing for peace of mind.",
+    fullDescription: "We handle both individual and business tax preparation with year-round planning strategies to minimize liabilities and avoid surprises at tax time.",
+    points: [
+      "Business and personal tax prep",
+      "Quarterly estimated taxes",
+      "Tax-saving strategies",
+      "IRS compliance support",
+      "Filing for multiple states"
+    ]
+  },
+  {
+    icon: <ShieldCheck size={48} className="text-primary-500" />,
+    title: "Compliance & Audit Support",
+    description: "Ensure financial compliance and prepare confidently for audits.",
+    fullDescription: "We support your business in staying compliant with regulatory requirements, including audit preparation, internal reviews, and financial documentation.",
+    points: [
+      "Audit preparation and liaison",
+      "Internal control setup",
+      "1099/Payroll compliance",
+      "Sales tax filings",
+      "Financial policy documentation"
+    ]
+  },
+  {
+    icon: <Lightbulb size={48} className="text-primary-500" />,
+    title: "Business Advisory Services",
+    description: "Financial strategy and advisory to support business growth.",
+    fullDescription: "Beyond the books, our advisory services help you understand the financial impact of business decisions. We assist with strategic planning, pricing models, mergers, and more.",
+    points: [
+      "Business model analysis",
+      "Pricing and margin strategy",
+      "Break-even and ROI analysis",
+      "Growth planning",
+      "Exit strategy consulting"
+    ]
+  }
+];
+
 
   const processes = [
     { number: "01", title: "Assessment & Onboarding", description: "Review systems and align on requirements", fullDescription: "We begin by understanding your current financial processes, tools, and goals. This includes a comprehensive review of your systems, accounts, and business structure to identify gaps and opportunities. We'll align on your specific requirements and tailor a plan accordingly." },
@@ -154,7 +155,7 @@ const ServicesPage = () => {
         height="h-[50vh]"
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-blue-200">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -228,7 +229,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-blue-200">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

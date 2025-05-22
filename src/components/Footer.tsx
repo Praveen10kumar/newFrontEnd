@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
               <li className="flex">
                 <MapPin className="h-5 w-5 mr-3 text-primary-400 flex-shrink-0" />
                 <span className="text-secondary-300">
-                  123 Innovation Street, Tech City, CA 90210
+                  C-399 Pareek College Road Near Sindhi Camp,Jaipur – 302016 INDIA
                 </span>
               </li>
               <li className="flex">
@@ -167,7 +167,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex">
                 <Mail className="h-5 w-5 mr-3 text-primary-400 flex-shrink-0" />
-                <span className="text-secondary-300">info@innovatesolutions.com</span>
+                <span className="text-secondary-300">Contact@Singhalnitinassociates.com</span>
               </li>
             </ul>
           </div>

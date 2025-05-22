@@ -1,110 +1,119 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu, X, Hexagon } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Calendar, Calculator } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-interface NavbarProps {
-  scrolled: boolean;
-}
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Resources', path: '/resources' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white shadow-md py-2'
+          : 'bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
-          <NavLink to="/" className="flex items-center">
-            <Hexagon className="h-8 w-8 text-primary-600" />
-            <span className="ml-2 text-xl font-bold text-secondary-900">
-              SNA
-            </span>
-          </NavLink>
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center">
+          <Link to="/" className="flex items-center">
+            <Calculator 
+              size={36} 
+              className="text-primary-800 mr-2" 
+            />
+            <span className="text-2xl font-bold text-primary-900">AccuBooks</span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            <NavLink to="/" className="nav-link">
-              Home
-            </NavLink>
-            <NavLink to="/about" className="nav-link">
-              About Us
-            </NavLink>
-            <NavLink to="/services" className="nav-link">
-              Services
-            </NavLink>
-            <NavLink to="/contact" className="nav-link">
-              Contact
-            </NavLink>
-            <NavLink to="/resources" className="nav-link">
-              Resources
-            </NavLink>
-          </nav>
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="text-neutral-700 hover:text-primary-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                to="/consultation"
+                className="bg-primary-600 text-white px-5 py-2 rounded-md hover:bg-primary-700 transition-colors flex items-center"
+              >
+                <Calendar size={18} className="mr-2" />
+                <span>Free Consultation</span>
+              </Link>
+            </motion.div>
+          </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden flex items-center text-secondary-700 focus:outline-none" 
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          {/* Mobile Navigation Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-neutral-700 hover:text-primary-600 transition-colors"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      <div 
-        className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-        }`}
-      >
-        <nav className="flex flex-col bg-white px-4 py-2 shadow-inner">
-          <NavLink 
-            to="/" 
-            className="py-3 border-b border-secondary-100 nav-link"
-            onClick={() => setIsMenuOpen(false)}
+        {/* Mobile Navigation Menu */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden pt-4 pb-4"
           >
-            Home
-          </NavLink>
-          <NavLink 
-            to="/about" 
-            className="py-3 border-b border-secondary-100 nav-link"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About Us
-          </NavLink>
-          <NavLink 
-            to="/services" 
-            className="py-3 border-b border-secondary-100 nav-link"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Services
-          </NavLink>
-          <NavLink 
-            to="/contact" 
-            className="py-3 nav-link"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </NavLink>
-          <NavLink 
-            to="/resources" 
-            className="py-3 nav-link"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Resources
-          </NavLink>
-        </nav>
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="text-neutral-700 hover:text-primary-600 py-2 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                to="/consultation"
+                onClick={() => setIsOpen(false)}
+                className="bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors flex items-center justify-center"
+              >
+                <Calendar size={18} className="mr-2" />
+                <span>Free Consultation</span>
+              </Link>
+            </div>
+          </motion.div>
+        )}
       </div>
-    </header>
+    </nav>
   );
 };
 

@@ -140,19 +140,19 @@ const ContactPage: React.FC = () => {
             {[
               {
                 question: "What types of businesses do you work with?",
-                answer: "We work with businesses of all sizes across various industries, from startups to enterprise organizations. Our clients include e-commerce stores, healthcare providers, educational institutions, financial services, and more."
+                answer: "We work with a wide range of businesses—from startups and solo entrepreneurs to established small and mid-sized companies. Our clients include e-commerce shops, law firms, healthcare practices, real estate agencies, and nonprofits."
               },
               {
-                question: "How long does a typical project take?",
-                answer: "Project timelines vary depending on scope and complexity. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements."
+                question: "Do you work with businesses in all states?",
+                answer: "Yes, we serve clients across the United States. Our cloud-based accounting tools and virtual team allow us to support businesses regardless of location while staying compliant with local tax regulations."
               },
               {
-                question: "What is your pricing structure?",
-                answer: "We offer flexible pricing models, including fixed-price quotes for well-defined projects and time and materials billing for more complex or evolving projects. We provide detailed estimates before starting any work."
+                question: "What bookkeeping software do you use?",
+                answer: "We primarily use QuickBooks Online and Xero, but we’re also experienced with platforms like FreshBooks, Wave, and NetSuite. We recommend tools based on what’s best for your specific business needs."
               },
               {
-                question: "Do you provide ongoing support after launch?",
-                answer: "Yes, we offer various maintenance and support packages to ensure your digital solutions continue to perform optimally. Our support services include bug fixes, updates, security patches, and performance monitoring."
+                question: "Can you work with my existing accountant or tax preparer?",
+                answer: "Absolutely. We often collaborate with in-house accountants or external CPAs and tax professionals to ensure seamless financial reporting and compliance for our clients."
               }
             ].map((faq, index) => (
               <motion.div

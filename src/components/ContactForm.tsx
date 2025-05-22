@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-white rounded-xl shadow-lg p-6 md:p-8"
+      className="bg-[rgb(176,215,239)] rounded-xl shadow-lg p-6 md:p-8"
     >
       <h3 className="text-2xl font-bold text-secondary-900 mb-6">Get In Touch</h3>
       

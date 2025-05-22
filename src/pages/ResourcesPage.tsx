@@ -37,61 +37,61 @@ const ResourcesPage: React.FC = () => {
   const bannerImage = "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
   const blogPosts = [
-    {
-      title: "10 Emerging Technology Trends to Watch in 2025",
-      excerpt: "Discover the cutting-edge technologies that will shape businesses and society in the coming year, from quantum computing to extended reality experiences.",
-      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      author: "Alex Johnson",
-      date: "July 15, 2025",
-      readTime: "8 min read",
-      category: "Technology"
-    },
-    {
-      title: "The Complete Guide to Digital Transformation",
-      excerpt: "Learn how businesses can successfully navigate the digital transformation journey with practical strategies, case studies, and actionable insights.",
-      image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      author: "Sophia Chen",
-      date: "June 28, 2025",
-      readTime: "12 min read",
-      category: "Strategy"
-    },
-    {
-      title: "Cybersecurity Essentials for Small Businesses",
-      excerpt: "Protect your small business from cyber threats with these essential security practices, tools, and protocols designed for organizations with limited IT resources.",
-      image: "https://images.pexels.com/photos/60504/security-protection-privacy-policy-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      author: "Marcus Williams",
-      date: "June 10, 2025",
-      readTime: "6 min read",
-      category: "Security"
-    },
-    {
-      title: "Building a Customer-Centric Digital Experience",
-      excerpt: "Explore strategies for creating digital experiences that put customers at the center, driving engagement, loyalty, and business growth.",
-      image: "https://images.pexels.com/photos/1560932/pexels-photo-1560932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      author: "Emma Rodriguez",
-      date: "May 22, 2025",
-      readTime: "9 min read",
-      category: "UX Design"
-    },
-    {
-      title: "How AI is Revolutionizing Data Analytics",
-      excerpt: "Explore the transformative impact of artificial intelligence on data analytics and how businesses can leverage AI-powered insights for competitive advantage.",
-      image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      author: "David Kumar",
-      date: "May 8, 2025",
-      readTime: "7 min read",
-      category: "Analytics"
-    },
-    {
-      title: "The Future of Work: Remote Collaboration Tools",
-      excerpt: "Discover the most effective tools and practices for remote team collaboration that can boost productivity, communication, and employee satisfaction.",
-      image: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      author: "Olivia Martinez",
-      date: "April 17, 2025",
-      readTime: "10 min read",
-      category: "Productivity"
-    }
-  ];
+  {
+    title: "Top 10 Bookkeeping Tips for Small Businesses in 2025",
+    excerpt: "Stay on top of your finances with these essential bookkeeping strategies designed to help small business owners stay organized and compliant.",
+    image: "https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    author: "Emma Walker",
+    date: "July 15, 2025",
+    readTime: "6 min read",
+    category: "Bookkeeping"
+  },
+  {
+    title: "How to Choose the Right Accounting Software",
+    excerpt: "From QuickBooks to Xero, we compare the most popular accounting platforms to help you find the best fit for your business.",
+    image: "https://images.pexels.com/photos/6693644/pexels-photo-6693644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    author: "Liam Patel",
+    date: "July 1, 2025",
+    readTime: "7 min read",
+    category: "Technology"
+  },
+  {
+    title: "Understanding Financial Statements: A Beginner’s Guide",
+    excerpt: "Learn how to read and interpret income statements, balance sheets, and cash flow statements to make smarter financial decisions.",
+    image: "https://images.pexels.com/photos/6693673/pexels-photo-6693673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    author: "Sophia Lin",
+    date: "June 20, 2025",
+    readTime: "8 min read",
+    category: "Finance"
+  },
+  {
+    title: "Tax Planning Strategies Every Business Should Know",
+    excerpt: "Minimize your tax burden legally and efficiently with these proactive tax planning tips for entrepreneurs and small business owners.",
+    image: "https://images.pexels.com/photos/4386369/pexels-photo-4386369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    author: "James Nguyen",
+    date: "May 30, 2025",
+    readTime: "9 min read",
+    category: "Tax"
+  },
+  {
+    title: "Cash Flow Management: Keep Your Business Financially Healthy",
+    excerpt: "Master your cash flow with proven techniques to ensure your business has enough liquidity to meet its obligations and grow sustainably.",
+    image: "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    author: "Natalie Brooks",
+    date: "May 15, 2025",
+    readTime: "7 min read",
+    category: "Cash Flow"
+  },
+  {
+    title: "Why Monthly Reconciliation Is Crucial for Your Business",
+    excerpt: "Avoid financial surprises by learning the importance of monthly bank reconciliations and how they contribute to financial accuracy.",
+    image: "https://images.pexels.com/photos/6693670/pexels-photo-6693670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    author: "Carlos Rivera",
+    date: "April 28, 2025",
+    readTime: "5 min read",
+    category: "Operations"
+  }
+];
 
   return (
     <div>

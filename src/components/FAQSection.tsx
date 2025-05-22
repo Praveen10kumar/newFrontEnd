@@ -6,27 +6,27 @@ const FAQSection: React.FC = () => {
   const faqs = [
     {
       question: "What services do you offer?",
-      answer: "We offer a comprehensive range of digital services including web development, mobile app development, cloud solutions, cybersecurity, data analytics, digital marketing, and innovation consulting. Each service is tailored to meet the specific needs of our clients."
+      answer: "We offer a full suite of accounting and bookkeeping services, including financial statement preparation, payroll processing, tax planning and filing, accounts payable/receivable management, bank reconciliations, budgeting and forecasting, and financial consulting. Our services are designed to meet the unique needs of small to medium-sized businesses."
     },
     {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity, scope, and requirements. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. During our initial consultation, we'll provide a more accurate timeline based on your specific project needs."
+      question: "How long does it take to get started?",
+      answer: "Getting started typically takes 1–2 weeks, depending on the complexity of your current financial setup. We begin with an initial consultation and a review of your existing records to ensure a smooth onboarding process."
     },
     {
-      question: "What is your development process?",
-      answer: "Our development process follows an agile methodology with seven key phases: Discovery, Planning, Design, Development, Testing, Deployment, and Support. We emphasize collaboration, regular communication, and iterative development to ensure your project meets your expectations."
+      question: "What is your process for managing our finances?",
+      answer: "Our process is structured around five key phases: Assessment, Setup, Categorization, Reconciliation, and Reporting. We prioritize accuracy, transparency, and timely communication to ensure your financials are always up-to-date and compliant."
     },
     {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer various support and maintenance packages to ensure your digital solutions continue to perform optimally. These packages can include regular updates, security patches, performance monitoring, and technical support."
+      question: "Do you provide ongoing support and consultation?",
+      answer: "Absolutely. We offer ongoing monthly support as part of our bookkeeping and accounting packages. You’ll have access to regular financial reports, compliance updates, and proactive financial advice tailored to your business goals."
     },
     {
-      question: "How do you handle project pricing?",
-      answer: "We offer flexible pricing models including fixed price, time and materials, and retainer arrangements. The appropriate model depends on your project's nature, scope, and requirements. We provide detailed proposals with transparent pricing before any work begins."
+      question: "How do you handle pricing for your services?",
+      answer: "We offer flexible pricing models, including monthly retainers, hourly billing, or custom packages based on your business’s size and service needs. All pricing is discussed transparently during our initial consultation."
     },
     {
-      question: "Can you work with our existing systems and technologies?",
-      answer: "Yes, we have experience integrating with a wide range of existing systems and technologies. We perform a thorough analysis of your current infrastructure to ensure seamless integration and minimal disruption to your operations."
+      question: "Can you work with our existing accounting software?",
+      answer: "Yes, we work with a wide range of accounting platforms including QuickBooks, Xero, FreshBooks, and Sage. We can either integrate with your current systems or recommend tools that best suit your operations."
     }
   ];
 
