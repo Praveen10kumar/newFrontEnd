@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Hexagon, 
+  Calculator,
   Mail, 
   MapPin, 
   Phone, 
@@ -19,7 +20,10 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <Hexagon className="h-8 w-8 text-primary-400" />
+              <Calculator 
+              size={36} 
+              className="text-primary-800 mr-2" 
+            />
               <span className="ml-2 text-xl font-bold">SNA</span>
             </div>
             <p className="text-secondary-300 mb-4">
