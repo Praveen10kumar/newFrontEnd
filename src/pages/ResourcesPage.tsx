@@ -234,7 +234,7 @@ const ResourcesPage: React.FC = () => {
         </div>
       </section>
       
-      <ChatButton onClick={handleChatClick} />
+      <ChatButton />
     </div>
   );
 };

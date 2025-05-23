@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Code, 
@@ -13,13 +14,10 @@ import ServiceCard from '../components/ServiceCard';
 import ScrollSection from '../components/ScrollSection';
 import ChatButton from '../components/ChatButton';
 
- const handleChatClick = () => {
-    // For demonstration purposes only - would use react-router in a real app
-    console.log('Navigating to contact page');
-    window.location.href = '/contact';
-  };
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate();
+
   const bannerImage = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   const scrollSectionBg = "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
@@ -40,7 +38,7 @@ const HomePage: React.FC = () => {
         backgroundImage={bannerImage}
       />
       
-      <section className="py-16 md:py-24 bg-[rgb(231,230,125)]">
+      <section className="py-16 md:py-24 bg-blue-500">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -111,19 +109,18 @@ const HomePage: React.FC = () => {
             <p className="text-secondary-600 max-w-2xl mx-auto mb-8">
               Let's discuss how our innovative solutions can help you achieve your goals.
             </p>
-            <motion.a
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/contact"
-              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
-            >
+              onClick={() => navigate('/contact')}
+              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">
               Get in Touch
-            </motion.a>
+            </motion.button>
           </motion.div>
         </div>
       </section>
 
-      <ChatButton onClick={handleChatClick} />
+      <ChatButton />
     </div>
   );
 };

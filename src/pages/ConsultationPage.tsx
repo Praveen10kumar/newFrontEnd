@@ -34,7 +34,7 @@ const ConsultationPage: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-              Why Choose AccuBooks?
+              Why Choose SNA?
             </h2>
             <div className="w-20 h-1 bg-secondary-500 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -73,7 +73,7 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
 
-      <ChatButton onClick={handleChatClick} />
+      <ChatButton />
 
     </div>
   );

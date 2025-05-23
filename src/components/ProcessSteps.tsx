@@ -89,20 +89,7 @@ const ProcessSteps: React.FC = () => {
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <a 
-              href="/contact" 
-              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-3 rounded-md transition-colors"
-            >
-              Schedule Your Free Consultation
-            </a>
-          </motion.div>
+
         </div>
       </div>
     </section>

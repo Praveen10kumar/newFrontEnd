@@ -189,7 +189,7 @@ const ScheduleConsultation: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-secondary-500 hover:bg-secondary-600 text-white font-medium py-3 px-4 rounded-md transition-colors"
+                      className="w-full bg-blue-400 hover:bg-secondary-600 text-white font-medium py-3 px-4 rounded-md transition-colors"
                     >
                       Schedule Consultation
                     </motion.button>

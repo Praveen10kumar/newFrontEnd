@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Code, 
@@ -8,18 +9,17 @@ import {
   Database, 
   Globe, 
   ShieldCheck, 
-  Lightbulb 
+  Lightbulb, 
+  Contact
 } from 'lucide-react';
 
 import Banner from '../components/Banner';
 import ChatButton from '../components/ChatButton';
-
-const handleChatClick = () => {
-  console.log('Navigating to contact page');
-  window.location.href = '/contact';
-};
+import { Navigate } from 'react-router-dom';
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
+
   const bannerImage = "https://images.pexels.com/photos/3182774/pexels-photo-3182774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
   const services = [
@@ -216,14 +216,13 @@ const ServicesPage = () => {
             <p className="text-primary-100 max-w-2xl mx-auto mb-8">
               Let's discuss how our services can help you achieve your business goals.
             </p>
-            <motion.a
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/contact"
-              className="inline-block bg-white text-primary-800 font-medium px-6 py-3 rounded-md hover:bg-primary-50 transition-colors"
-            >
+              onClick={() => navigate('/contact')}
+              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">
               Get in Touch
-            </motion.a>
+            </motion.button>
           </motion.div>
         </div>
       </section>
@@ -271,7 +270,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <ChatButton onClick={handleChatClick} />
+      <ChatButton />
     </div>
   );
 };

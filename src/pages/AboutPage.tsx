@@ -5,10 +5,6 @@ import { Award, Users, Clock, Globe } from 'lucide-react';
 import Banner from '../components/Banner';
 import ChatButton from '../components/ChatButton';
 
-const handleChatClick = () => {
-  window.location.href = '/contact';
-};
-
 const AboutPage: React.FC = () => {
   const bannerImage =
     'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
@@ -41,7 +37,7 @@ const AboutPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="w-20 h-1 bg-primary-500 mb-6"></div>
               <p className="text-gray-700 mb-4">
-                Established in 2013, Singhal Nitin & Associates was formed with the vision of being a “Global Accountancy Company”. With time, SNA has emerged as a all-encompassing accountant with a team of qualified and dedicated professionals. Our accounting team utilizes online technology to help scale up your business by managing your Bookkeeping and Accounting, with a personalized touch.
+                Established in 2013, Singhal Nitin & Associates was formed with the vision of being a "Global Accountancy Company". With time, SNA has emerged as a all-encompassing accountant with a team of qualified and dedicated professionals. Our accounting team utilizes online technology to help scale up your business by managing your Bookkeeping and Accounting, with a personalized touch.
               </p>
               <p className="text-gray-700 mb-4">
                 Be it Bookeeping, Accounting, Virtual CFO, System Setup & Migration services, you name it, SNA has it. We are skilled in providing comprehensive financial services to small & medium-sized business owners, CPA Firms & Accounting practice owners.
@@ -155,64 +151,101 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ✅ New Leadership Section for CEO */}
-      <section className="py-10 md:py-14 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Meet the visionary behind Singhal Nitin & Associates.
-          </p>
-        </motion.div>
-
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      {/* Leadership Section with updated layout */}
+      <section className="py-16 md:py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[60%] mx-auto"
+            className="text-center mb-12"
           >
-            <img
-              src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Nitin Singhal - CEO"
-              className="rounded-lg shadow-xl w-full h-auto object-cover"
-            />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Meet the visionary behind Singhal Nitin & Associates.
+            </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-lg text-gray-800 w-full lg:w-[40%]"
-          >
-            <h3 className="text-2xl font-bold mb-2 text-primary-700">Nitin Singhal</h3>
-            <p className="text-md font-semibold mb-1">Chartered Accountant & Founder</p>
-            <p className="text-sm text-primary-600 mb-4">Certified QuickBooks ProAdvisor & Xero Advisor</p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-2">
-              Nitin is a qualified Chartered Accountant with close to a decade of successful experience. He is also a CFA USA Level 2 candidate and a certified QuickBooks and Xero expert.
-            </p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-2">
-              Prior to starting his own CA firm, Nitin worked at PricewaterhouseCoopers, Mumbai and various local CA firms.
-            </p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-2">
-              Backed by his experience serving clients across the UK, US, Australia, and India, he is skilled in business transformation and professional advisory.
-            </p>
-            <p className="text-gray-700 text-sm leading-relaxed">
-              Nitin's interests include traveling abroad, working out, and entrepreneurship.
-            </p>
-          </motion.div>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/3"
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-xl">
+                <img
+                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Nitin Singhal - CEO"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent"></div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-2/3 max-h-[60vh] overflow-y-auto"
+            >
+              <div className="bg-gradient-to-br from-white to-primary-50 p-6 md:p-8 rounded-lg shadow-lg h-full">
+                <h3 className="text-2xl font-bold mb-2 text-primary-700">Nitin Singhal</h3>
+                <p className="text-md font-semibold mb-1">Chartered Accountant & Founder</p>
+                <p className="text-sm text-primary-600 mb-4">Certified QuickBooks ProAdvisor & Xero Advisor</p>
+                
+                <div className="space-y-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    Nitin is a qualified Chartered Accountant with close to a decade of successful experience. He is also a CFA USA Level 2 candidate and a certified QuickBooks and Xero expert.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Prior to starting his own CA firm, Nitin worked at PricewaterhouseCoopers, Mumbai and various local CA firms.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Backed by his experience serving clients across the UK, US, Australia, and India, he is skilled in business transformation and professional advisory.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Nitin's interests include traveling abroad, working out, and entrepreneurship.
+                  </p>
+                  
+                  <div className="pt-4 border-t border-primary-100">
+                    <h4 className="text-lg font-semibold mb-2 text-primary-700">Areas of Expertise</h4>
+                    <ul className="grid grid-cols-2 gap-2">
+                      <li className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                        Financial Analysis
+                      </li>
+                      <li className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                        Business Advisory
+                      </li>
+                      <li className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                        QuickBooks & Xero
+                      </li>
+                      <li className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                        Tax Planning
+                      </li>
+                      <li className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                        International Accounting
+                      </li>
+                      <li className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
+                        Digital Transformation
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
 
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
@@ -231,7 +264,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      <ChatButton onClick={handleChatClick} />
+      <ChatButton />
     </div>
   );
 };

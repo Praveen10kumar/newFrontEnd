@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
+          : 'bg-slate-400 bg-opacity-50 py-4'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
               size={36} 
               className="text-primary-800 mr-2" 
             />
-            <span className="text-2xl font-bold text-primary-900">AccuBooks</span>
+            <span className="text-2xl font-bold text-primary-900">SNA</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-neutral-700 hover:text-primary-600 font-medium transition-colors"
+                className="text-neutral-700 hover:text-blue-600 font-medium transition-colors"
               >
                 {item.name}
               </Link>

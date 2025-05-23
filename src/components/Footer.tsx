@@ -20,10 +20,10 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <Hexagon className="h-8 w-8 text-primary-400" />
-              <span className="ml-2 text-xl font-bold">Innovate</span>
+              <span className="ml-2 text-xl font-bold">SNA</span>
             </div>
             <p className="text-secondary-300 mb-4">
-              Transforming ideas into reality. We create innovative solutions to help your business grow.
+              Empowering your finances. Expert bookkeeping and accounting to keep your business on track
             </p>
             <div className="flex space-x-4">
               <a 
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
                   to="/services" 
                   className="text-secondary-300 hover:text-primary-400 transition-colors"
                 >
-                  Digital Strategy
+                  Controller Services
                 </Link>
               </li>
               <li>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                   to="/services" 
                   className="text-secondary-300 hover:text-primary-400 transition-colors"
                 >
-                  Web Development
+                  Transactional Accounting
                 </Link>
               </li>
               <li>
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                   to="/services" 
                   className="text-secondary-300 hover:text-primary-400 transition-colors"
                 >
-                  Mobile Applications
+                  Cloud Accounting Setup
                 </Link>
               </li>
               <li>
@@ -137,15 +137,7 @@ const Footer: React.FC = () => {
                   to="/services" 
                   className="text-secondary-300 hover:text-primary-400 transition-colors"
                 >
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/services" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Data Analytics
+                  Financial Reporting & Analysis
                 </Link>
               </li>
             </ul>

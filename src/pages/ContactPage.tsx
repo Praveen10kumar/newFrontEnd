@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock,Facebook, Twitter, Instagram, Linkedin  } from 'lucide-react';
 
 import Banner from '../components/Banner';
 import ContactForm from '../components/ContactForm';
@@ -201,7 +201,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      <ChatButton onClick={handleChatClick} />
+      <ChatButton />
     </div>
   );
 };
