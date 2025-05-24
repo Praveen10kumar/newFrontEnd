@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
         backgroundImage={bannerImage}
       />
       
-      <section className="py-16 md:py-24 bg-blue-500">
+      <section className="py-16 md:py-24 bg-blue-100">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ const HomePage: React.FC = () => {
       />
       
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

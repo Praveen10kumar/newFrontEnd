@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      className="service-card bg-gradient-to-br from-accent-500 to-customPurple text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
+      className="service-card bg-gradient-to-br from-sky-500 to-blue-500 text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
     >
       <div className="p-6">
         <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white text-accent-500 mb-5 mx-auto">

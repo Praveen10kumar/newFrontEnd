@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className='bg-blue-50'>
       <Banner 
         title="Contact Us" 
         subtitle="We'd love to hear from you" 
@@ -120,7 +120,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
       
-      <section className="py-16 bg-secondary-50">
+      <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

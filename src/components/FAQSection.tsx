@@ -31,7 +31,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white rounded-lg shadow-md p-6 md:p-8">
+    <section className="bg-gray-50 rounded-lg shadow-md p-6 md:p-8">
       <motion.h2 
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -78,7 +78,7 @@ const ClientTestimonials: React.FC = () => {
   };
 
   return (
-    <div className="py-16 bg-yellow-100">
+    <div className="py-16 bg-blue-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2 
