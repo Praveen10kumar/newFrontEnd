@@ -78,7 +78,7 @@ const ClientTestimonials: React.FC = () => {
   };
 
   return (
-    <div className="py-16 bg-blue-100">
+    <div className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2 
@@ -109,7 +109,7 @@ const ClientTestimonials: React.FC = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="overflow-hidden rounded-lg shadow-lg bg-sky-400">
+          <div className="overflow-hidden rounded-lg shadow-lg bg-sky-300">
             <div className="p-8 md:p-12 relative">
               <div className="text-primary-400 mb-6 flex">
                 {[...Array(5)].map((_, i) => (

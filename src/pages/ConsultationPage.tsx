@@ -43,13 +43,13 @@ const ConsultationPage: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
-      <ClientTestimonials />
       
       <ProcessSteps />
       
       <VideoTestimonials />
       
+      <ClientTestimonials />
+
       <ScheduleConsultation />
       
       <section className="py-16 bg-primary-900 text-white">

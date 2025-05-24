@@ -155,7 +155,7 @@ const ServicesPage = () => {
         height="h-[50vh]"
       />
 
-      <section className="py-16 md:py-24 bg-blue-200">
+      <section className="py-16 md:py-24 bg-blue-100">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -228,7 +228,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 md:py-24 bg-blue-200">
+      <section className="py-16 md:py-24 bg-blue-100">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
