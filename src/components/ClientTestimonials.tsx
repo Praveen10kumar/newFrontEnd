@@ -21,14 +21,14 @@ const ClientTestimonials: React.FC = () => {
       name: "Sarah Johnson",
       role: "CEO",
       company: "Bright Future LLC",
-      content: "AccuBooks transformed our financial management system. Their attention to detail and proactive approach saved us from potential tax issues and helped us optimize our cash flow. Definitely recommend their services!",
+      content: "SNA transformed our financial management system. Their attention to detail and proactive approach saved us from potential tax issues and helped us optimize our cash flow. Definitely recommend their services!",
       rating: 5
     },
     {
       id: 2,
       name: "Michael Chen",
       role: "Small Business Owner",
-      content: "As a small business owner, I was drowning in paperwork until I found AccuBooks. Their team organized my finances, set up efficient systems, and now I can focus on growing my business instead of worrying about bookkeeping.",
+      content: "As a small business owner, I was drowning in paperwork until I found SNA. Their team organized my finances, set up efficient systems, and now I can focus on growing my business instead of worrying about bookkeeping.",
       rating: 5
     },
     {
@@ -36,14 +36,14 @@ const ClientTestimonials: React.FC = () => {
       name: "Emily Rodriguez",
       role: "Operations Manager",
       company: "Sunset Hospitality",
-      content: "We've been working with AccuBooks for over three years now. Their monthly financial reports are clear and insightful, and they're always available to answer questions. They're truly partners in our financial success.",
+      content: "We've been working with SNA for over three years now. Their monthly financial reports are clear and insightful, and they're always available to answer questions. They're truly partners in our financial success.",
       rating: 5
     },
     {
       id: 4,
       name: "David Wilson",
       role: "Freelance Consultant",
-      content: "AccuBooks understands the unique challenges freelancers face. They helped me set up a proper accounting system, maximize my deductions, and prepare for tax season without the usual stress. Worth every penny!",
+      content: "SNA understands the unique challenges freelancers face. They helped me set up a proper accounting system, maximize my deductions, and prepare for tax season without the usual stress. Worth every penny!",
       rating: 5
     },
   ];

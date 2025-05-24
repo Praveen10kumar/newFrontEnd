@@ -15,13 +15,6 @@ const Banner: React.FC<BannerProps> = ({
   height = 'h-[70vh]' 
 }) => {
   const bannerRef = useRef<HTMLDivElement>(null);
-  const textCarouselItems = [
-    "Innovative Solutions",
-    "Cutting-Edge Technology",
-    "Expert Consultation",
-    "Strategic Planning",
-    "Transformative Results"
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,21 +70,6 @@ const Banner: React.FC<BannerProps> = ({
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative h-8 overflow-hidden"
           >
-            <div className="absolute w-full animate-text-slide">
-              {textCarouselItems.map((item, index) => (
-                <div 
-                  key={index} 
-                  className="h-8 flex items-center justify-center text-customPurple text-3xl font-semibold"
-                >
-                  {item}
-                </div>
-              ))}
-              <div 
-                className="h-8 flex items-center justify-center text-customPurple text-3xl font-semibold"
-              >
-                {textCarouselItems[0]}
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

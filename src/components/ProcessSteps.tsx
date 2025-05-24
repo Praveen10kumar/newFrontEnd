@@ -67,7 +67,7 @@ const ProcessSteps: React.FC = () => {
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
-                className="bg-white rounded-lg shadow-lg p-8 relative overflow-hidden"
+                className="bg-red-50 rounded-lg shadow-lg p-8 relative overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -76,10 +76,8 @@ const ProcessSteps: React.FC = () => {
                 <div className="mb-6 relative z-10">
                   {step.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-primary-900 mb-4 relative z-10">
-                  <span className="text-7xl font-bold text-gray-100 absolute -top-10 -left-2 z-0">
-                    {step.id}
-                  </span>
+                <h3 className="text-2xl font-bold text-primary-900 mb-4 flex items-center gap-2 relative z-10">
+                  <span className="text-3xl font-bold text-blue-400">{step.id}.</span>
                   {step.title}
                 </h3>
                 <p className="text-gray-600 relative z-10">
