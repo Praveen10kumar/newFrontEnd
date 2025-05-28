@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-slate-400 bg-opacity-80 py-4'
+          : 'bg-white py-4'
       }`}
     >
       <div className="container mx-auto px-4">
