@@ -105,6 +105,14 @@ const Footer: React.FC = () => {
                   Resources
                 </Link>
               </li>
+              <li>
+                <Link 
+                  to="/industries" 
+                  className="text-secondary-300 hover:text-primary-400 transition-colors"
+                >
+                  Industries
+                </Link>
+              </li>
             </ul>
           </div>
           

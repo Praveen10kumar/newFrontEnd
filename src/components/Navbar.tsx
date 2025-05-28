@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
     { name: 'Services', path: '/services' },
     { name: 'Resources', path: '/resources' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Industries', path: '/industries'},
   ];
 
   return (
@@ -33,7 +34,7 @@ const Navbar: React.FC = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-slate-400 bg-opacity-50 py-4'
+          : 'bg-slate-400 bg-opacity-80 py-4'
       }`}
     >
       <div className="container mx-auto px-4">
