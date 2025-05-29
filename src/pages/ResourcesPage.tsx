@@ -94,7 +94,7 @@ const ResourcesPage: React.FC = () => {
 ];
 
   return (
-    <div>
+    <div className='pt-20'>
       <Banner 
         title="Resources" 
         subtitle="Insights, guides, and answers to help your business thrive" 

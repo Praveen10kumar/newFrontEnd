@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Code, 
-  LineChart, 
-  Smartphone, 
-  Cloud, 
-  Database 
+import {
+  FileText,
+  Shuffle,
+  CreditCard,
+  Briefcase,
+  BarChart2
 } from 'lucide-react';
+
 
 import Banner from '../components/Banner';
 import ServiceCard from '../components/ServiceCard';
@@ -31,7 +32,7 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className='pt-20'>
       <Banner 
         title="Bookkeeping & Accounting Services" 
         subtitle="Get Best Services for Everyone" 
@@ -55,19 +56,19 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <ServiceCard 
-              icon={<Code size={32} />}
+              icon={<FileText size={32} />}
               title="Accounting and Bookkeeping"
               description="Chart of Accounts Preparation, Invoices & Expenses posting.."
               delay={0.1}
             />
             <ServiceCard 
-              icon={<Smartphone size={32} />}
+              icon={<Shuffle size={32} />}
               title="Accounting Software Migration"
               description="Migration from Xero, QB online, Sage, Netsuite, etc."
               delay={0.2}
             />
             <ServiceCard 
-              icon={<LineChart size={32} />}
+              icon={<CreditCard size={32} />}
               title="Accounts Receivable"
               description="Invoice Processing, Lodgement, Reconciliations & aging analysis, etc."
               delay={0.3}
@@ -76,13 +77,13 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:w-2/3 mx-auto">
             <ServiceCard 
-              icon={<Cloud size={32} />}
+              icon={<Briefcase size={32} />}
               title="Virtual CFO Services"
               description="Virtual CFO services are provided according to the needs of the client. Sometimes, there is no need for a full-time skilled CFO professional."
               delay={0.4}
             />
             <ServiceCard 
-              icon={<Database size={32} />}
+              icon={<BarChart2 size={32} />}
               title="Management Reporting"
               description="Income Statement, Cash Flow Statement, Profit & Loss Statements, KPI Indicators, etc."
               delay={0.5}

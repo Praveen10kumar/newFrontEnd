@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Code, 
-  Smartphone, 
-  LineChart, 
-  Cloud, 
-  Database, 
-  Globe, 
-  ShieldCheck, 
-  Lightbulb, 
-  Contact
+  FileBarChart,   // for Virtual CFO
+  Receipt,        // for Controller Services
+  BookText,       // for Transactional Accounting
+  CloudCog,       // for Cloud Accounting Setup
+  FileText,       // for Financial Reporting & Analysis
+  Banknote,       // for Tax Preparation & Planning
+  ShieldCheck,    // for Compliance & Audit Support (unchanged, appropriate)
+  BarChart3       // for Business Advisory Services
 } from 'lucide-react';
+
 
 import Banner from '../components/Banner';
 import ChatButton from '../components/ChatButton';
@@ -24,7 +24,7 @@ const ServicesPage = () => {
   
   const services = [
   {
-    icon: <Code size={48} className="text-primary-500" />,
+    icon: <FileBarChart size={48} className="text-primary-500" />,
     title: "Virtual CFO",
     description: "Strategic financial leadership without the cost of a full-time CFO.",
     fullDescription: "Our Virtual CFO service gives you access to strategic financial guidance from experienced professionals. Ideal for growing businesses that need expert oversight on financial planning, forecasting, budgeting, and KPI tracking without hiring a full-time executive.",
@@ -37,7 +37,7 @@ const ServicesPage = () => {
     ]
   },
   {
-    icon: <Smartphone size={48} className="text-primary-500" />,
+    icon: <Receipt size={48} className="text-primary-500" />,
     title: "Controller Services",
     description: "Experienced Controllers to oversee your accounting operations.",
     fullDescription: "Our Controller service provides accurate financial oversight and helps manage accounting teams, processes, and compliance. Ideal for businesses ready to upgrade from a bookkeeper to structured financial management.",
@@ -50,7 +50,7 @@ const ServicesPage = () => {
     ]
   },
   {
-    icon: <LineChart size={48} className="text-primary-500" />,
+    icon: <BookText size={48} className="text-primary-500" />,
     title: "Transactional Accounting",
     description: "Reliable and accurate daily bookkeeping and financial records.",
     fullDescription: "Our Transactional service ensures that your books are always up to date. We handle your routine financial entries, reconciliations, and reporting with accuracy and timeliness.",
@@ -63,7 +63,7 @@ const ServicesPage = () => {
     ]
   },
   {
-    icon: <Cloud size={48} className="text-primary-500" />,
+    icon: <CloudCog size={48} className="text-primary-500" />,
     title: "Cloud Accounting Setup",
     description: "Modern cloud-based accounting solutions tailored for your business.",
     fullDescription: "We set up and optimize cloud accounting systems like QuickBooks Online and Xero, enabling secure, real-time access to your financials and improved workflow efficiency.",
@@ -76,7 +76,7 @@ const ServicesPage = () => {
     ]
   },
   {
-    icon: <Database size={48} className="text-primary-500" />,
+    icon: <FileText size={48} className="text-primary-500" />,
     title: "Financial Reporting & Analysis",
     description: "Insightful reports to support informed business decisions.",
     fullDescription: "We provide detailed financial reporting and custom dashboards to help you understand performance, track trends, and make strategic decisions with confidence.",
@@ -89,7 +89,7 @@ const ServicesPage = () => {
     ]
   },
   {
-    icon: <Globe size={48} className="text-primary-500" />,
+    icon: <Banknote size={48} className="text-primary-500" />,
     title: "Tax Preparation & Planning",
     description: "Strategic planning and accurate tax filing for peace of mind.",
     fullDescription: "We handle both individual and business tax preparation with year-round planning strategies to minimize liabilities and avoid surprises at tax time.",
@@ -115,7 +115,7 @@ const ServicesPage = () => {
     ]
   },
   {
-    icon: <Lightbulb size={48} className="text-primary-500" />,
+    icon: <BarChart3 size={48} className="text-primary-500" />,
     title: "Business Advisory Services",
     description: "Financial strategy and advisory to support business growth.",
     fullDescription: "Beyond the books, our advisory services help you understand the financial impact of business decisions. We assist with strategic planning, pricing models, mergers, and more.",
@@ -147,7 +147,7 @@ const ServicesPage = () => {
   const [hoveredProcess, setHoveredProcess] = useState(null);
 
   return (
-    <div>
+    <div className='pt-20'>
       <Banner 
         title="Our Services" 
         subtitle="Accounting & Bookkeeping Solution" 

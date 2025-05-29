@@ -29,7 +29,7 @@ const IndustriesPage: React.FC = () => {
   const bannerImage = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
   return (
-    <div className="bg-gradient-to-b from-cyan-50 to-white min-h-screen">
+    <div className="bg-gradient-to-b from-cyan-50 to-white min-h-screen pt-20">
       <Banner 
         title="Industries We Serve" 
         subtitle="Specialized accounting and bookkeeping solutions for your specific industry needs" 

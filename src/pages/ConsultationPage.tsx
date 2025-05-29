@@ -16,7 +16,7 @@ const ConsultationPage: React.FC = () => {
   const bannerImage = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
   return (
-    <div>
+    <div className='pt-20'>
       <Banner 
         title="Schedule Your Free Consultation" 
         subtitle="Take the first step towards optimizing your business finances" 

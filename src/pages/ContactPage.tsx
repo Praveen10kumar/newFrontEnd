@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className='bg-blue-50'>
+    <div className='bg-blue-50 pt-20'>
       <Banner 
         title="Contact Us" 
         subtitle="We'd love to hear from you" 

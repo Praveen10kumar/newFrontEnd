@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Users, Clock, Globe } from 'lucide-react';
+import { Award, Users, Clock, Globe, Mail } from 'lucide-react';
 
 import Banner from '../components/Banner';
 import ChatButton from '../components/ChatButton';
@@ -17,7 +17,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="bg-gray-50 text-gray-800 pt-20">
       <Banner
         title="About Singhal Nitin & Associates"
         subtitle="Get to know our company and our mission"
@@ -63,6 +63,62 @@ const AboutPage: React.FC = () => {
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent-500 rounded-lg -z-10"></div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Letter from CEO Section */}
+      <section className="py-16 bg-gradient-to-br from-primary-50 to-accent-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative bg-white p-8 md:p-12 rounded-lg shadow-xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-bl-3xl -z-10 transform translate-x-4 -translate-y-4"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent-100 rounded-tr-3xl -z-10 transform -translate-x-4 translate-y-4"></div>
+              
+              <div className="flex items-center mb-8">
+                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white mr-4">
+                  <Mail size={28} />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary-900">A Letter From Our CEO</h2>
+              </div>
+              
+              <div className="mb-8 italic text-gray-600 text-lg">
+                Dear Valued Clients and Partners,
+              </div>
+              
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  When I founded Singhal Nitin & Associates in 2013, I had a vision to create an accounting firm that would transcend traditional boundaries and embrace the digital future. Today, I'm proud to say that we've not only realized that vision but continue to expand upon it each day.
+                </p>
+                
+                <p>
+                  Our journey began with a simple promise: to provide exceptional accounting services with unwavering integrity and a personal touch. Over the years, we've grown from a small local practice to a global team serving clients across continents, but that core promise remains unchanged.
+                </p>
+                
+                <p>
+                  What sets us apart is our commitment to innovation. We've embraced technology not as a replacement for human expertise, but as a powerful tool that enables our team to deliver more value, insights, and strategic guidance to your business. By combining cutting-edge accounting systems with our team's deep professional knowledge, we've created a service model that truly addresses the complexities of modern business.
+                </p>
+                
+                <p>
+                  As we look to the future, our focus remains on your success. Whether you're a small business owner navigating growth challenges, a CPA firm seeking reliable back-office support, or an enterprise requiring sophisticated financial analysis, our team is dedicated to being your trusted financial partner.
+                </p>
+                
+                <p>
+                  I personally invite you to experience the SNA difference. Our doors—both physical and virtual—are always open, and we welcome the opportunity to demonstrate how our services can transform your financial operations and contribute to your lasting success.
+                </p>
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="font-script text-2xl text-primary-800 mb-1">Nitin Singhal</div>
+                <div className="text-gray-600">Founder & CEO, Singhal Nitin & Associates</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -177,7 +233,7 @@ const AboutPage: React.FC = () => {
             >
               <div className="relative overflow-hidden rounded-lg shadow-xl">
                 <img
-                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src='../src/assets/img1.jpg'
                   alt="Nitin Singhal - CEO"
                   className="w-full h-auto object-cover"
                 />

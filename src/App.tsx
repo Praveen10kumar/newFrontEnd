@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import ResourcesPage from './pages/ResourcesPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ConsultationPage from './pages/ConsultationPage';
+import ReferralPage from './pages/ReferralPage';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/consultation" element={<ConsultationPage />} />
+        <Route path="/referral" element={<ReferralPage />} />
       </Route>
     </Routes>
   );

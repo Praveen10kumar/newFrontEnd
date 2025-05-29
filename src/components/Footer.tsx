@@ -113,6 +113,14 @@ const Footer: React.FC = () => {
                   Industries
                 </Link>
               </li>
+              <li>
+                <Link 
+                  to="/referral" 
+                  className="text-secondary-300 hover:text-primary-400 transition-colors"
+                >
+                  Referral & Earn
+                </Link>
+              </li>
             </ul>
           </div>
           
