@@ -233,7 +233,7 @@ const AboutPage: React.FC = () => {
             >
               <div className="relative overflow-hidden rounded-lg shadow-xl">
                 <img
-                  src='src/assets/img1.png'
+                  src='/img1.jpg'
                   alt="Nitin Singhal - CEO"
                   className="w-full h-auto object-cover"
                 />
