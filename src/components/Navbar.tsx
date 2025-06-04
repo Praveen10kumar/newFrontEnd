@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Calendar, Calculator } from 'lucide-react';
+import { Menu, X, Calendar, Calculator, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +24,20 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { 
+      name: 'Services', 
+      path: '/services',
+    },
     { name: 'Resources', path: '/resources' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Industries', path: '/industries'},
-    { name: 'Referral & Earn', path: '/referral'},
+    { 
+      name: 'More', 
+      path: '#',
+      subItems: [
+        { name: 'Contact', path: '/contact' },
+        { name: 'Industries', path: '/industries' },
+        { name: 'Referral & Earn', path: '/referral' },
+      ]
+    },
   ];
 
   return (
@@ -49,15 +59,39 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-neutral-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative group">
+                {item.subItems ? (
+                  <>
+                    <button 
+                      className="flex items-center text-neutral-700 hover:text-blue-600 font-medium transition-colors"
+                      onClick={() => setServicesOpen(!servicesOpen)}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} className="ml-1" />
+                    </button>
+                    <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      {item.subItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.path}
+                          className="block px-4 py-2 text-neutral-700 hover:bg-primary-50 hover:text-primary-600"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="text-neutral-700 hover:text-blue-600 font-medium transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -94,14 +128,41 @@ const Navbar: React.FC = () => {
           >
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className="text-neutral-700 hover:text-primary-600 py-2 transition-colors"
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.subItems ? (
+                    <>
+                      <button 
+                        className="flex items-center text-neutral-700 hover:text-primary-600 py-2 transition-colors w-full"
+                        onClick={() => setServicesOpen(!servicesOpen)}
+                      >
+                        {item.name}
+                        <ChevronDown size={16} className="ml-1" />
+                      </button>
+                      {servicesOpen && (
+                        <div className="pl-4">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              onClick={() => setIsOpen(false)}
+                              className="block py-2 text-neutral-700 hover:text-primary-600"
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className="text-neutral-700 hover:text-primary-600 py-2 transition-colors block"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <Link
                 to="/consultation"
