@@ -130,7 +130,7 @@ const ResourcesPage: React.FC = () => {
                     transition={{ duration: 0.4 }}
                   >
                     <div className="mb-8">
-                      <h2 className="text-3xl font-bold mb-6">Latest Blog Posts</h2>
+                      <h2 className="text-3xl font-bold mb-6" id="latest-blog">Latest Blog Posts</h2>
                       <p className="text-gray-600 mb-8">
                         Stay up to date with the latest trends, insights, and best practices in technology and digital innovation.
                       </p>
@@ -172,7 +172,7 @@ const ResourcesPage: React.FC = () => {
                     transition={{ duration: 0.4 }}
                   >
                     <div className="mb-8">
-                      <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+                      <h2 className="text-3xl font-bold mb-6" id="faqs">Frequently Asked Questions</h2>
                       <p className="text-gray-600 mb-8">
                         Find quick answers to common questions about our services, process, and approach.
                       </p>
