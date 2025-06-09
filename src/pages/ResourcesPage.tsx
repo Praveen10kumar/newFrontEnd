@@ -36,62 +36,64 @@ const ResourcesPage: React.FC = () => {
 
   const bannerImage = "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
-  const blogPosts = [
-  {
-    title: "Top 10 Bookkeeping Tips for Small Businesses in 2025",
-    excerpt: "Stay on top of your finances with these essential bookkeeping strategies designed to help small business owners stay organized and compliant.",
-    image: "https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    author: "Emma Walker",
-    date: "July 15, 2025",
-    readTime: "6 min read",
-    category: "Bookkeeping"
-  },
-  {
-    title: "How to Choose the Right Accounting Software",
-    excerpt: "From QuickBooks to Xero, we compare the most popular accounting platforms to help you find the best fit for your business.",
-    image: "https://images.pexels.com/photos/6693644/pexels-photo-6693644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    author: "Liam Patel",
-    date: "July 1, 2025",
-    readTime: "7 min read",
-    category: "Technology"
-  },
-  {
-    title: "Understanding Financial Statements: A Beginner’s Guide",
-    excerpt: "Learn how to read and interpret income statements, balance sheets, and cash flow statements to make smarter financial decisions.",
-    image: "https://images.pexels.com/photos/6693673/pexels-photo-6693673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    author: "Sophia Lin",
-    date: "June 20, 2025",
-    readTime: "8 min read",
-    category: "Finance"
-  },
-  {
-    title: "Tax Planning Strategies Every Business Should Know",
-    excerpt: "Minimize your tax burden legally and efficiently with these proactive tax planning tips for entrepreneurs and small business owners.",
-    image: "https://images.pexels.com/photos/4386369/pexels-photo-4386369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    author: "James Nguyen",
-    date: "May 30, 2025",
-    readTime: "9 min read",
-    category: "Tax"
-  },
-  {
-    title: "Cash Flow Management: Keep Your Business Financially Healthy",
-    excerpt: "Master your cash flow with proven techniques to ensure your business has enough liquidity to meet its obligations and grow sustainably.",
-    image: "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    author: "Natalie Brooks",
-    date: "May 15, 2025",
-    readTime: "7 min read",
-    category: "Cash Flow"
-  },
-  {
-    title: "Why Monthly Reconciliation Is Crucial for Your Business",
-    excerpt: "Avoid financial surprises by learning the importance of monthly bank reconciliations and how they contribute to financial accuracy.",
-    image: "https://images.pexels.com/photos/6693670/pexels-photo-6693670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    author: "Carlos Rivera",
-    date: "April 28, 2025",
-    readTime: "5 min read",
-    category: "Operations"
-  }
-];
+  const blogPosts = [   
+    {     
+      title: "Top 10 Bookkeeping Tips for Small Businesses in 2025",     
+      excerpt: "Stay on top of your finances with these essential bookkeeping strategies designed to help small business owners stay organized and compliant.",     
+      image: "https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",     
+      author: "Emma Walker",     
+      date: "July 15, 2025",     
+      readTime: "6 min read",     
+      category: "Bookkeeping"   
+    }, 
+
+    {     
+      title: "How to Choose the Right Accounting Software",     
+      excerpt: "From QuickBooks to Xero, we compare the most popular accounting platforms to help you find the best fit for your business.",     
+      image: "https://images.pexels.com/photos/6693644/pexels-photo-6693644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",     
+      author: "Liam Patel",     
+      date: "July 1, 2025",     
+      readTime: "7 min read",     
+      category: "Technology"   
+    }, 
+
+    {     
+      title: "Understanding Financial Statements: A Beginner’s Guide",     
+      excerpt: "Learn how to read and interpret income statements, balance sheets, and cash flow statements to make smarter financial decisions.",     
+      image: "https://images.pexels.com/photos/6693673/pexels-photo-6693673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",     
+      author: "Sophia Lin",     
+      date: "June 20, 2025",     
+      readTime: "8 min read",     
+      category: "Finance"   
+    },   
+    {     
+      title: "Tax Planning Strategies Every Business Should Know",     
+      excerpt: "Minimize your tax burden legally and efficiently with these proactive tax planning tips for entrepreneurs and small business owners.",     
+      image: "https://images.pexels.com/photos/4386369/pexels-photo-4386369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",     
+      author: "James Nguyen",     
+      date: "May 30, 2025",     
+      readTime: "9 min read",     
+      category: "Tax"   
+    },   
+    {     
+      title: "Cash Flow Management: Keep Your Business Financially Healthy",     
+      excerpt: "Master your cash flow with proven techniques to ensure your business has enough liquidity to meet its obligations and grow sustainably.",     
+      image: "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",     
+      author: "Natalie Brooks",     
+      date: "May 15, 2025",     
+      readTime: "7 min read",     
+      category: "Cash Flow"   
+    },   
+    {     
+      title: "Why Monthly Reconciliation Is Crucial for Your Business",     
+      excerpt: "Avoid financial surprises by learning the importance of monthly bank reconciliations and how they contribute to financial accuracy.",     
+      image: "https://images.pexels.com/photos/6693670/pexels-photo-6693670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",     
+      author: "Carlos Rivera",     
+      date: "April 28, 2025",     
+      readTime: "5 min read",     
+      category: "Operations"   
+    } 
+  ];
 
   return (
     <div className='pt-20'>
@@ -111,7 +113,6 @@ const ResourcesPage: React.FC = () => {
                 onSectionChange={setActiveSection}
               />
             )}
-
             <div className="flex flex-col md:flex-row gap-8">
               {!isMobile && (
                 <div className="md:w-1/4">
