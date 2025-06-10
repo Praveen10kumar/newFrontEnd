@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import Banner from '../components/Banner';
@@ -9,57 +10,81 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import ChatButton from '../components/ChatButton';
 import ServiceComparisonTool from '../components/ServiceComparisonTool';
 
+const industryKeys = [
+  'retail',
+  'healthcare',
+  'construction',
+  'technology',
+  'professional',
+  'nonprofit'
+];
+
 const IndustriesPage: React.FC = () => {
   const [activeIndustry, setActiveIndustry] = useState('retail');
   const [isMobile, setIsMobile] = useState(false);
-  
+  const location = useLocation();
+
+  // Unified scroll and active industry setter
+  const goToIndustry = useCallback((industry: string) => {
+    setActiveIndustry(industry);
+    setTimeout(() => {
+      const el = document.getElementById(industry);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }, []);
+
+  // Listen for hash changes (including direct navigation and navbar clicks)
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (industryKeys.includes(hash)) {
+      goToIndustry(hash);
+    }
+  }, [location.hash, goToIndustry]);
+
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkIfMobile);
-    };
+    return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
   const bannerImage = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-  
+
   return (
     <div className="bg-gradient-to-b from-cyan-50 to-white min-h-screen pt-20">
-      <Banner 
-        title="Industries We Serve" 
-        subtitle="Specialized accounting and bookkeeping solutions for your specific industry needs" 
+      <Banner
+        title="Industries We Serve"
+        subtitle="Specialized accounting and bookkeeping solutions for your specific industry needs"
         backgroundImage={bannerImage}
         height="h-[40vh]"
       />
-      
+
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {isMobile && (
-              <IndustryTabs 
+              <IndustryTabs
                 activeIndustry={activeIndustry}
-                onIndustryChange={setActiveIndustry}
+                onIndustryChange={goToIndustry}
               />
             )}
 
             <div className="flex flex-col md:flex-row gap-8">
               {!isMobile && (
                 <div className="md:w-1/4">
-                  <IndustrySidebar 
+                  <IndustrySidebar
                     activeIndustry={activeIndustry}
-                    onIndustryChange={setActiveIndustry}
+                    onIndustryChange={goToIndustry}
                   />
                 </div>
               )}
-              
+
               <div className="md:w-3/4">
                 <motion.div
                   key={activeIndustry}
+                  id={activeIndustry}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
@@ -68,8 +93,8 @@ const IndustriesPage: React.FC = () => {
                 >
                   <IndustryContent industry={activeIndustry} />
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -79,8 +104,8 @@ const IndustriesPage: React.FC = () => {
                   <h2 className="text-2xl font-bold mb-6 text-gray-800">What Our Clients Say</h2>
                   <TestimonialCarousel industry={activeIndustry} />
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -95,7 +120,7 @@ const IndustriesPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-12 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -127,7 +152,7 @@ const IndustriesPage: React.FC = () => {
           </motion.div>
         </div>
       </section>
-      
+
       <ChatButton />
     </div>
   );
@@ -217,11 +242,11 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">{currentIndustry.title}</h2>
           <p className="text-gray-600 mb-6">{currentIndustry.description}</p>
-          
+
           <h3 className="text-xl font-semibold text-gray-800 mb-3">How We Help</h3>
           <ul className="space-y-2 mb-6">
             {currentIndustry.benefits.map((benefit, index) => (
-              <motion.li 
+              <motion.li
                 key={index}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -233,7 +258,7 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
               </motion.li>
             ))}
           </ul>
-          
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -242,34 +267,34 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
             Request Industry-Specific Consultation
           </motion.button>
         </div>
-        
+
         <div className="md:w-1/2">
-          <motion.div 
+          <motion.div
             className="rounded-xl overflow-hidden shadow-md h-[300px] md:h-[400px]"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <img 
-              src={currentIndustry.image} 
+            <img
+              src={currentIndustry.image}
               alt={currentIndustry.title}
               className="w-full h-full object-cover"
             />
           </motion.div>
         </div>
       </div>
-      
+
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <IndustryCard 
+        <IndustryCard
           title="Specialized Bookkeeping"
           description="Industry-specific chart of accounts and financial tracking tailored to your business needs."
           icon="BookOpen"
         />
-        <IndustryCard 
+        <IndustryCard
           title="Compliance Support"
           description="Stay compliant with industry-specific regulations and reporting requirements."
           icon="Shield"
         />
-        <IndustryCard 
+        <IndustryCard
           title="Strategic Advisory"
           description="Data-driven insights to help you make better financial decisions for your industry."
           icon="LineChart"

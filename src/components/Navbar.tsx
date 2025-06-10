@@ -32,9 +32,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -49,7 +47,7 @@ const Navbar: React.FC = () => {
     { name: 'Referral & Earn', path: '/referral' },
   ];
 
-  // --- Helper: handle dropdown click for Resources/Industries ---
+  // Dropdown click handler
   const handleDropdownClick = (
     e: React.MouseEvent,
     page: string,
@@ -57,7 +55,8 @@ const Navbar: React.FC = () => {
   ) => {
     e.preventDefault();
     if (location.pathname === page) {
-      // Already on page: scroll to section
+      // Already on page: update hash and scroll
+      window.history.replaceState(null, '', `${page}#${hash}`);
       scrollToSection(hash);
       setShowDropdown(null);
     } else {
@@ -67,13 +66,12 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // --- Helper: handle main link click for Resources/Industries ---
+  // Main link click handler
   const handleMainLinkClick = (
     e: React.MouseEvent,
     path: string,
     dropdownKey: string
   ) => {
-    // Only navigate if not already on the page without hash
     if (!(location.pathname === path && !location.hash)) {
       e.preventDefault();
       navigate(path);
@@ -81,7 +79,7 @@ const Navbar: React.FC = () => {
     setShowDropdown(null);
   };
 
-  // --- Scroll to hash on navigation (for direct URL access) ---
+  // Scroll to hash on navigation (for direct URL access)
   useEffect(() => {
     if (
       (location.pathname === '/resources' || location.pathname === '/industries') &&
@@ -211,7 +209,6 @@ const Navbar: React.FC = () => {
               </Link>
             </motion.div>
           </div>
-
           {/* Mobile Navigation Button */}
           <div className="md:hidden">
             <button
@@ -222,7 +219,6 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation Menu */}
         {isOpen && (
           <motion.div
@@ -251,6 +247,7 @@ const Navbar: React.FC = () => {
                             onClick={(e) => {
                               e.preventDefault();
                               if (location.pathname === '/resources') {
+                                window.history.replaceState(null, '', `/resources#${section.hash}`);
                                 scrollToSection(section.hash);
                                 setIsOpen(false);
                               } else {
@@ -285,6 +282,7 @@ const Navbar: React.FC = () => {
                             onClick={(e) => {
                               e.preventDefault();
                               if (location.pathname === '/industries') {
+                                window.history.replaceState(null, '', `/industries#${section.hash}`);
                                 scrollToSection(section.hash);
                                 setIsOpen(false);
                               } else {
