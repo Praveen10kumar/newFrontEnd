@@ -251,12 +251,13 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`rounded-lg shadow-md p-6 cursor-pointer transform transition-all duration-300 hover:scale-[1.04] hover:shadow-xl border border-gray-200 ${index % 5 === 0 ? 'bg-indigo-50' : index % 5 === 1 ? 'bg-teal-50' : index % 5 === 2 ? 'bg-rose-50' : index % 5 === 3 ? 'bg-orange-50' : 'bg-cyan-50'}`}
+                className="rounded-lg shadow-md p-6 cursor-pointer transform transition-all duration-300 hover:scale-[1.04] hover:shadow-xl border border-gray-200 bg-gradient-to-br from-indigo-50 to-purple-50"
+
                 onMouseEnter={() => setHoveredProcess(index)}
                 onMouseLeave={() => setHoveredProcess(null)}
               >
                 <div className="flex items-center mb-3">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white font-bold text-lg mr-4">
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-blue-600 font-bold text-lg mr-4">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-semibold">{step.title}</h3>

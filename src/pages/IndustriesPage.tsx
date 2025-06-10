@@ -170,7 +170,9 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         "Cash flow forecasting for seasonal fluctuations",
         "Cost of goods sold analysis"
       ],
-      image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      engagementModels: ["Personalization", "Omnichannel", "Gamification"],
+      essentialTools: ["AI personalization", "Omnichannel platforms", "Analytics"]
     },
     healthcare: {
       title: "Healthcare & Medical",
@@ -182,7 +184,9 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         "Practice expense management",
         "Healthcare-specific tax planning"
       ],
-      image: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      engagementModels: ["Patient Engagement (PHE)", "Shared Decision-Making"],
+      essentialTools: ["Patient portals", "Telehealth", "Mobile apps", "Wearables"]
     },
     construction: {
       title: "Construction & Contracting",
@@ -194,7 +198,9 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         "Equipment depreciation tracking",
         "Certified payroll processing"
       ],
-      image: "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      engagementModels: ["Delivery Partner", "8-Step Contractor Model"],
+      essentialTools: ["Contract mgmt", "Procurement", "Collaboration tools"]
     },
     technology: {
       title: "Technology & SaaS",
@@ -206,7 +212,9 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         "Investor-ready financial reporting",
         "SaaS metrics and KPI monitoring"
       ],
-      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      engagementModels: ["High/Low-Touch", "Hybrid"],
+      essentialTools: ["Onboarding", "In-app messaging", "Analytics", "Automation"]
     },
     professional: {
       title: "Professional Services",
@@ -218,7 +226,9 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         "Utilization and realization rate analysis",
         "Professional liability insurance tracking"
       ],
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      engagementModels: ["Personalized", "Proactive", "Segmented"],
+      essentialTools: ["CRM", "Workflow automation", "Feedback", "Collaboration"]
     },
     nonprofit: {
       title: "Nonprofit & Associations",
@@ -230,7 +240,9 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
         "Donor management and reporting",
         "Board-ready financial statements"
       ],
-      image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      engagementModels: ["Community", "Omnichannel", "Donor Engagement"],
+      essentialTools: ["Email", "Social mgmt", "Event", "Survey", "Donor CRM"]
     }
   };
 
@@ -282,6 +294,106 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
           </motion.div>
         </div>
       </div>
+
+      {/* Engagement Models & Tools Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-12 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-8 border border-cyan-100"
+      >
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-bold text-gray-800 mb-3">
+            Our Strategic Approach for {currentIndustry.title}
+          </h3>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            We leverage proven engagement models and cutting-edge tools specifically tailored for your industry
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Engagement Models */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-white rounded-lg p-6 shadow-sm border border-cyan-100"
+          >
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-800">Engagement Models</h4>
+            </div>
+            <div className="space-y-3">
+              {currentIndustry.engagementModels.map((model, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-3 hover:from-cyan-100 hover:to-blue-100 transition-all"
+                >
+                  <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                  <span className="text-gray-700 font-medium">{model}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Essential Tools */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="bg-white rounded-lg p-6 shadow-sm border border-cyan-100"
+          >
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-800">Essential Tools</h4>
+            </div>
+            <div className="space-y-3">
+              {currentIndustry.essentialTools.map((tool, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
+                  className="flex items-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-3 hover:from-blue-100 hover:to-purple-100 transition-all"
+                >
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  <span className="text-gray-700 font-medium">{tool}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-8 text-center"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg inline-flex items-center"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            Discuss Your Industry Strategy
+          </motion.button>
+        </motion.div>
+      </motion.div>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         <IndustryCard
