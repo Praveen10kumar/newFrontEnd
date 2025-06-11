@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Users, Clock, Globe, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 import Banner from '../components/Banner';
 import ChatButton from '../components/ChatButton';
@@ -8,13 +8,6 @@ import ChatButton from '../components/ChatButton';
 const AboutPage: React.FC = () => {
   const bannerImage =
     'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
-
-  const stats = [
-    { icon: <Clock size={28} />, value: '10+', label: 'Years of Experience' },
-    { icon: <Users size={28} />, value: '100+', label: 'Satisfied Clients' },
-    { icon: <Award size={28} />, value: '250+', label: 'Projects Completed' },
-    { icon: <Globe size={28} />, value: '15+', label: 'Countries Served' },
-  ];
 
   return (
     <div className="bg-gray-50 text-gray-800 pt-20">
@@ -180,29 +173,6 @@ const AboutPage: React.FC = () => {
                 </motion.div>
               )
             )}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20 bg-primary-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="bg-primary-800 p-3 rounded-full">{stat.icon}</div>
-                </div>
-                <div className="text-4xl font-bold mb-2">{stat.value}</div>
-                <div className="text-primary-200">{stat.label}</div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

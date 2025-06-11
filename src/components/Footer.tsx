@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Hexagon, 
   Calculator,
   Mail, 
   MapPin, 
@@ -16,177 +15,267 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-blue-950 text-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center mb-4">
-              <Calculator 
-              size={36} 
-              className="text-primary-800 mr-2" 
+        {/* Company Logo and Description */}
+        <div className="mb-12">
+          <div className="flex items-center mb-6">
+            <Calculator 
+              size={40} 
+              className="text-blue-400 mr-3" 
             />
-              <span className="ml-2 text-xl font-bold">SNA</span>
-            </div>
-            <p className="text-secondary-300 mb-4">
-              Empowering your finances. Expert bookkeeping and accounting to keep your business on track
-            </p>
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="text-secondary-300 hover:text-primary-400 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-secondary-300 hover:text-primary-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-secondary-300 hover:text-primary-400 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-secondary-300 hover:text-primary-400 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
+            <span className="text-2xl font-bold">SNA</span>
+          </div>
+          <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
+            Empowering your finances. Expert bookkeeping and accounting to keep your business on track
+          </p>
+        </div>
+
+        {/* Main Footer Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          
+          {/* ACCOUNTING SERVICES */}
+          <div>
+            <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
+              Accounting Services
+            </h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-white font-semibold text-lg mb-3">Controller Services</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link 
+                      to="/services" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Day-to-Day Financials
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Analytics
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-white font-semibold text-lg mb-3">Consulting</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link 
+                      to="/services" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      CFO Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Corporate Finance
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          
-          {/* Quick Links */}
+
+          {/* INDUSTRIES */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
+              Industries
+            </h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-white font-semibold text-lg mb-3">Small Businesses</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link 
+                      to="/industries" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Retail Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/industries" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Professional Services
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-white font-semibold text-lg mb-3">Enterprise</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link 
+                      to="/industries" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Manufacturing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/industries" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Technology
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* RESOURCES */}
+          <div>
+            <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
+              Resources
+            </h3>
+            <ul className="space-y-3">
               <li>
                 <Link 
-                  to="/" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
+                  to="/resources" 
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/about" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/services" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Contact
+                  Case Studies
                 </Link>
               </li>
               <li>
                 <Link 
                   to="/resources" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Resources
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link 
-                  to="/industries" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
+                  to="/resources" 
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Industries
+                  Webinars
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/resources" 
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
+                >
+                  Financial Tools
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* COMPANY */}
+          <div>
+            <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
+              Company
+            </h3>
+            <ul className="space-y-3 mb-8">
+              <li>
+                <Link 
+                  to="/about" 
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/contact" 
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
+                >
+                  Contact Sales
                 </Link>
               </li>
               <li>
                 <Link 
                   to="/referral" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Referral & Earn
+                  Referral Program
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/careers" 
+                  className="text-white font-medium hover:text-blue-400 transition-colors"
+                >
+                  Careers
                 </Link>
               </li>
             </ul>
+
+            {/* Social Media Icons */}
+            <div className="flex space-x-4">
+              <a 
+                href="http://linkedin.com/in/nitinn-singhal" 
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a 
+                href="#" 
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter size={24} />
+              </a>
+              <a 
+                href="https://www.facebook.com/nitin.singhal.75098?mibextid=wwXIfr&rdid=054tPrbFgnT2hw0N&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F1C1CVydtwN%252F%253Fmibextid%253DwwXIfr#" 
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a 
+                href="#" 
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
-          
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/services" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Controller Services
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/services" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Transactional Accounting
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/services" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Cloud Accounting Setup
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/services" 
-                  className="text-secondary-300 hover:text-primary-400 transition-colors"
-                >
-                  Financial Reporting & Analysis
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex">
-                <MapPin className="h-5 w-5 mr-3 text-primary-400 flex-shrink-0" />
-                <span className="text-secondary-300">
-                  C-399 Pareek College Road Near Sindhi Camp,Jaipur – 302016 INDIA
-                </span>
-              </li>
-              <li className="flex">
-                <Phone className="h-5 w-5 mr-3 text-primary-400 flex-shrink-0" />
-                <span className="text-secondary-300">+1 (555) 123-4567</span>
-              </li>
-              <li className="flex">
-                <Mail className="h-5 w-5 mr-3 text-primary-400 flex-shrink-0" />
-                <span className="text-secondary-300">Contact@Singhalnitinassociates.com</span>
-              </li>
-            </ul>
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-12 pt-8 border-t border-blue-800">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="flex items-start">
+              <MapPin className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
+              <span className="text-gray-300 text-sm">
+                C-399 Pareek College Road Near Sindhi Camp, Jaipur – 302016 INDIA
+              </span>
+            </div>
+            <div className="flex items-center">
+              <Phone className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
+              <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
+              <span className="text-gray-300 text-sm">Contact@Singhalnitinassociates.com</span>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-secondary-700 mt-10 pt-6 text-center text-secondary-400 text-sm">
-          <p>© {new Date().getFullYear()} Innovate Solutions. All rights reserved.</p>
+        {/* Copyright */}
+        <div className="pt-6 text-center border-t border-blue-800">
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} Singhal Nitin Associates. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

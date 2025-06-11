@@ -1,23 +1,29 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import {
   FileText,
   Shuffle,
   CreditCard,
   Briefcase,
-  BarChart2
+  BarChart2,
+  Award,
+  Users,
+  Clock,
+  Globe
 } from 'lucide-react';
-
 
 import Banner from '../components/Banner';
 import ServiceCard from '../components/ServiceCard';
 import ScrollSection from '../components/ScrollSection';
 import ChatButton from '../components/ChatButton';
-
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const statsRef = useRef(null);
+  const isStatsInView = useInView(statsRef, { once: true, threshold: 0.3 });
 
   const bannerImage = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   const scrollSectionBg = "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
@@ -29,6 +35,13 @@ const HomePage: React.FC = () => {
     "Custom-Tailored Services : Our team is all-set to provide well-crafted solutions for your unique business needs.",
     "Technologically Efficient : Singhal Nitin & Associates chooses the tech-savvy approach to automate your business and provide effective solutions.",
     "Skilled Specialists : With CAs, CPAs, MBAs and other experienced expert personnel on our side, you get the best."
+  ];
+
+  const stats = [
+    { icon: <Clock size={28} />, value: 10, suffix: '+', label: 'Years of Experience' },
+    { icon: <Users size={28} />, value: 100, suffix: '+', label: 'Satisfied Clients' },
+    { icon: <Award size={28} />, value: 250, suffix: '+', label: 'Projects Completed' },
+    { icon: <Globe size={28} />, value: 15, suffix: '+', label: 'Countries Served' },
   ];
 
   return (
@@ -97,6 +110,52 @@ const HomePage: React.FC = () => {
         title="Why Work With Us"
         points={whyChooseUsPoints}
       />
+
+      {/* Statistics Section with Animated Counters */}
+      <section ref={statsRef} className="py-16 md:py-20 bg-primary-900 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Track Record</h2>
+            <p className="text-primary-200 max-w-2xl mx-auto">
+              Numbers that speak for our commitment to excellence and client satisfaction.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary-800 p-3 rounded-full text-primary-200 hover:bg-primary-700 transition-colors duration-300">
+                    {stat.icon}
+                  </div>
+                </div>
+                <div className="text-4xl font-bold mb-2 text-white">
+                  <AnimatedCounter 
+                    end={stat.value} 
+                    suffix={stat.suffix}
+                    isVisible={isStatsInView}
+                    duration={2.5}
+                  />
+                </div>
+                <div className="text-primary-200 text-sm md:text-base">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 text-center ">
