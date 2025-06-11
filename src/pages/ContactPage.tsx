@@ -102,18 +102,26 @@ const ContactPage: React.FC = () => {
                 <p className="mb-6">
                   Follow us on social media to stay updated with our latest news, projects, and insights.
                 </p>
-                <div className="flex space-x-4">
-                  {['facebook', 'twitter', 'instagram', 'linkedin'].map((platform) => (
-                    <a
-                      key={platform}
-                      href="#"
-                      className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
-                      aria-label={`Follow us on ${platform}`}
-                    >
-                      <span className="capitalize">{platform[0]}</span>
-                    </a>
-                  ))}
-                </div>
+                  <div className="flex space-x-4">
+                    {[
+                      { name: 'facebook', url: 'https://www.facebook.com/nitin.singhal.75098?mibextid=wwXIfr&rdid=054tPrbFgnT2hw0N&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F1C1CVydtwN%252F%253Fmibextid%253DwwXIfr#' },
+                      { name: 'twitter', url: '#' },
+                      { name: 'instagram', url: '#' },
+                      { name: 'linkedin', url: 'http://linkedin.com/in/nitinn-singhal' },
+                    ].map((platform) => (
+                      <a
+                        key={platform.name}
+                        href={platform.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
+                        aria-label={`Follow us on ${platform.name}`}
+                      >
+                        <span className="capitalize">{platform.name[0]}</span>
+                      </a>
+                    ))}
+                  </div>
+
               </motion.div>
             </div>
           </div>
