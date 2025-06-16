@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Minus } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
+
 
 interface ServiceComparisonToolProps {
   industry: string;
@@ -185,14 +187,18 @@ const ServiceComparisonTool: React.FC<ServiceComparisonToolProps> = ({ industry 
           </div>
           
           <div className="mt-8 text-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-8 py-3 rounded-md shadow-md hover:shadow-lg transition-all"
-            >
-              Schedule a Consultation
-            </motion.button>
+            <HashLink smooth to="/consultation#schedule-consultation">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-8 py-3 rounded-md shadow-md hover:shadow-lg transition-all"
+              >
+                Schedule a Consultation
+              </motion.button>
+            </HashLink>
           </div>
+
+
         </motion.div>
       </div>
     </div>

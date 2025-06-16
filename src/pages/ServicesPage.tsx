@@ -201,32 +201,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-primary-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-primary-100 max-w-2xl mx-auto mb-8">
-              Let's discuss how our services can help you achieve your business goals.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/contact')}
-              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">
-              Get in Touch
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
-
+      
       {/* Process Section */}
       <section className="py-16 md:py-24 bg-blue-100">
         <div className="container mx-auto px-4">
@@ -270,6 +245,33 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-primary-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-primary-100 max-w-2xl mx-auto mb-8">
+              Let's discuss how our services can help you achieve your business goals.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/contact')}
+              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">
+              Get in Touch
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
 
       <ChatButton />
     </div>

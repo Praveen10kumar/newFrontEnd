@@ -50,7 +50,9 @@ const ConsultationPage: React.FC = () => {
       
       <ClientTestimonials />
 
-      <ScheduleConsultation />
+      <div id="schedule-consultation">
+        <ScheduleConsultation />
+      </div>
       
       <section className="py-16 bg-primary-900 text-white">
         <div className="container mx-auto px-4 text-center">

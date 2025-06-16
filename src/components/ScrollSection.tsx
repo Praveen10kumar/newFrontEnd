@@ -2,16 +2,21 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+interface ScrollSectionPoint {
+  icon: React.ReactNode;
+  text: string;
+}
+
 interface ScrollSectionProps {
   backgroundImage: string;
   title: string;
-  points: string[];
+  points: ScrollSectionPoint[];
 }
 
-const ScrollSection: React.FC<ScrollSectionProps> = ({ 
-  backgroundImage, 
-  title, 
-  points 
+const ScrollSection: React.FC<ScrollSectionProps> = ({
+  backgroundImage,
+  title,
+  points
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -23,18 +28,18 @@ const ScrollSection: React.FC<ScrollSectionProps> = ({
 
   return (
     <div ref={ref} className="relative min-h-[80vh] flex items-center overflow-hidden">
-      <motion.div 
-        className="absolute inset-0 z-0" 
+      <motion.div
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover', 
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           scale
         }}
       >
         <div className="absolute inset-0 bg-primary-900/80"></div>
       </motion.div>
-      
+
       <div className="container mx-auto px-4 py-16 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -47,7 +52,7 @@ const ScrollSection: React.FC<ScrollSectionProps> = ({
           </h2>
           <div className="w-20 h-1 bg-accent-500 mx-auto"></div>
         </motion.div>
-        
+
         <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
           {points.map((point, index) => (
             <motion.div
@@ -55,14 +60,12 @@ const ScrollSection: React.FC<ScrollSectionProps> = ({
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20"
+              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 flex items-center"
             >
-              <p className="text-white text-lg">
-                <span className="text-accent-400 font-bold text-2xl mr-2">
-                  0{index + 1}
-                </span>
-                {point}
-              </p>
+              <span className="text-accent-400 font-bold text-2xl mr-4 flex-shrink-0">
+                {point.icon}
+              </span>
+              <p className="text-white text-lg">{point.text}</p>
             </motion.div>
           ))}
         </div>

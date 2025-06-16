@@ -11,7 +11,11 @@ import {
   Award,
   Users,
   Clock,
-  Globe
+  Globe,
+  DollarSign,
+  Shield,
+  Settings,
+  Cpu
 } from 'lucide-react';
 
 import Banner from '../components/Banner';
@@ -29,13 +33,31 @@ const HomePage: React.FC = () => {
   const scrollSectionBg = "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   
   const whyChooseUsPoints = [
-    "One Stop Solution : If you want high-quality Bookeeping, Accounting, Virtual CFO, System Setup & Migration services, we have it.",
-    "Affordable : Rendering value based pricing so it stays win win for both of us.",
-    "Secured Data : Your financial data is our bread. You can trust us with your financial data, because we take food seriously.",
-    "Custom-Tailored Services : Our team is all-set to provide well-crafted solutions for your unique business needs.",
-    "Technologically Efficient : Singhal Nitin & Associates chooses the tech-savvy approach to automate your business and provide effective solutions.",
-    "Skilled Specialists : With CAs, CPAs, MBAs and other experienced expert personnel on our side, you get the best."
-  ];
+  {
+    icon: <FileText size={32} className="text-primary-600" />,
+    text: "One Stop Solution : If you want high-quality Bookkeeping, Accounting, Virtual CFO, System Setup & Migration services, we have it."
+  },
+  {
+    icon: <DollarSign size={32} className="text-primary-600" />,
+    text: "Affordable : Rendering value based pricing so it stays win win for both of us."
+  },
+  {
+    icon: <Shield size={32} className="text-primary-600" />,
+    text: "Secured Data : Your financial data is our bread. You can trust us with your financial data, because we take food seriously."
+  },
+  {
+    icon: <Settings size={32} className="text-primary-600" />,
+    text: "Custom-Tailored Services : Our team is all-set to provide well-crafted solutions for your unique business needs."
+  },
+  {
+    icon: <Cpu size={32} className="text-primary-600" />,
+    text: "Technologically Efficient : Singhal Nitin & Associates chooses the tech-savvy approach to automate your business and provide effective solutions."
+  },
+  {
+    icon: <Users size={32} className="text-primary-600" />,
+    text: "Skilled Specialists : With CAs, CPAs, MBAs and other experienced expert personnel on our side, you get the best."
+  }
+];
 
   const stats = [
     { icon: <Clock size={28} />, value: 10, suffix: '+', label: 'Years of Experience' },

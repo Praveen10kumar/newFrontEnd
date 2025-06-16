@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                       to="/services" 
                       className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
                     >
-                      CFO Services
+                      Personalized financial assessment
                     </Link>
                   </li>
                   <li>
@@ -76,7 +76,15 @@ const Footer: React.FC = () => {
                       to="/services" 
                       className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
                     >
-                      Corporate Finance
+                      Growth planning guidance
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      Tax-saving strategies
                     </Link>
                   </li>
                 </ul>
@@ -147,14 +155,6 @@ const Footer: React.FC = () => {
                   to="/resources" 
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/resources" 
-                  className="text-white font-medium hover:text-blue-400 transition-colors"
-                >
                   Blog
                 </Link>
               </li>
@@ -163,15 +163,7 @@ const Footer: React.FC = () => {
                   to="/resources" 
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Webinars
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/resources" 
-                  className="text-white font-medium hover:text-blue-400 transition-colors"
-                >
-                  Financial Tools
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -196,7 +188,7 @@ const Footer: React.FC = () => {
                   to="/contact" 
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Contact Sales
+                  Contact 
                 </Link>
               </li>
               <li>
@@ -205,14 +197,6 @@ const Footer: React.FC = () => {
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
                   Referral Program
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/careers" 
-                  className="text-white font-medium hover:text-blue-400 transition-colors"
-                >
-                  Careers
                 </Link>
               </li>
             </ul>
@@ -255,12 +239,6 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-blue-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-start">
-              <MapPin className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
-              <span className="text-gray-300 text-sm">
-                C-399 Pareek College Road Near Sindhi Camp, Jaipur – 302016 INDIA
-              </span>
-            </div>
-            <div className="flex items-center">
               <Phone className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
               <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
             </div>

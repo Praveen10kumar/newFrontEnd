@@ -271,13 +271,13 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
             ))}
           </ul>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-6 py-3 rounded-md hover:from-cyan-600 hover:to-blue-700 transition-all shadow-md"
           >
             Request Industry-Specific Consultation
-          </motion.button>
+          </motion.button> */}
         </div>
 
         <div className="md:w-1/2">
@@ -382,7 +382,7 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-8 text-center"
         >
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg inline-flex items-center"
@@ -391,7 +391,7 @@ const IndustryContent: React.FC<{ industry: string }> = ({ industry }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
             Discuss Your Industry Strategy
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </motion.div>
 
