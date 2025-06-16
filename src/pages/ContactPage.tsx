@@ -17,10 +17,6 @@ const ContactPage: React.FC = () => {
   
   const contactInfo = [
     {
-      icon: <MapPin size={24} className="text-primary-500" />,
-      title: "Our Location",
-      details: "C-399 Pareek College Road Near Sindhi Camp,Jaipur – 302016 INDIA"},
-    {
       icon: <Phone size={24} className="text-primary-500" />,
       title: "Phone Number",
       details: "+1 (555) 123-4567"
