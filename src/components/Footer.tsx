@@ -18,11 +18,11 @@ const Footer: React.FC = () => {
         {/* Company Logo and Description */}
         <div className="mb-12">
           <div className="flex items-center mb-6">
-            <Calculator 
+            {/* <Calculator 
               size={40} 
               className="text-blue-400 mr-3" 
-            />
-            <span className="text-2xl font-bold">SNA</span>
+            /> */}
+            <span className="text-2xl font-bold">SINGHALNITINASSOCIATES</span>
           </div>
           <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
             Empowering your finances. Expert bookkeeping and accounting to keep your business on track
@@ -240,7 +240,7 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-start">
               <Phone className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
-              <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+              <span className="text-gray-300 text-sm">+91 99282 83543</span>
             </div>
             <div className="flex items-center">
               <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />

@@ -17,6 +17,17 @@ const resourceSections = [
   { label: 'FAQs', hash: 'faqs' },
 ];
 
+const serviceSections = [
+  'Virtual CFO',
+  'Controller Service',
+  'Transactional Accounting',
+  'Cloud Accounting Setup',
+  'Financial Reporting and Analysis',
+  'Tax Preparation and Planning',
+  'Compliance and Audit Support',
+  'Business Advisory Service',
+];
+
 const scrollToSection = (id: string) => {
   const el = document.getElementById(id);
   if (el) {
@@ -55,12 +66,10 @@ const Navbar: React.FC = () => {
   ) => {
     e.preventDefault();
     if (location.pathname === page) {
-      // Already on page: update hash and scroll
       window.history.replaceState(null, '', `${page}#${hash}`);
       scrollToSection(hash);
       setShowDropdown(null);
     } else {
-      // Navigate to page with hash (will scroll after navigation)
       navigate(`${page}#${hash}`);
       setShowDropdown(null);
     }
@@ -95,13 +104,59 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <Calculator size={36} className="text-primary-800 mr-2" />
-            <span className="text-2xl font-bold text-primary-900">SNA</span>
+            {/* <Calculator size={36} className="text-primary-800 mr-2" /> */}
+            <span className="text-2xl font-bold text-primary-900">SINGHALNITINASSOCIATES</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 relative">
             {navItems.map((item) => {
+              // --- Service Dropdown ---
+              if (item.name === 'Services') {
+                return (
+                  <div
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setShowDropdown('services')}
+                    onMouseLeave={() => setShowDropdown(null)}
+                  >
+                    <button
+                      onClick={(e) => handleMainLinkClick(e, item.path, 'services')}
+                      className="flex items-center text-neutral-700 hover:text-blue-600 font-medium transition-colors focus:outline-none"
+                    >
+                      {item.name}
+                      <ChevronDown
+                        size={18}
+                        className={`ml-1 transition-transform duration-200 ${showDropdown === 'services' ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {showDropdown === 'services' && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -8 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-2 w-64 bg-white shadow-md rounded-md z-10"
+                        >
+                          {serviceSections.map((service) => (
+                            <button
+                              key={service}
+                              onClick={() => {
+                                setShowDropdown(null);
+                                navigate(`/services?name=${encodeURIComponent(service)}`);
+                              }}
+                              className="w-full text-left block px-4 py-2 text-sm text-neutral-700 hover:bg-gray-100"
+                            >
+                              {service}
+                            </button>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
               // Resources dropdown
               if (item.name === 'Resources') {
                 return (
