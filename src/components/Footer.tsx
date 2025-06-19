@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               size={40} 
               className="text-blue-400 mr-3" 
             /> */}
-            <span className="text-2xl font-bold">SINGHALNITINASSOCIATES</span>
+            <span className="text-2xl font-bold">SINGHAL NITIN ASSOCIATES</span>
           </div>
           <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
             Empowering your finances. Expert bookkeeping and accounting to keep your business on track

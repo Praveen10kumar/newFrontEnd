@@ -105,7 +105,9 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             {/* <Calculator size={36} className="text-primary-800 mr-2" /> */}
-            <span className="text-2xl font-bold text-primary-900">SINGHALNITINASSOCIATES</span>
+            <div className="bg-blue-600 rounded-lg px-4 py-2">
+              <span className="text-2xl font-bold text-white">SNA</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
