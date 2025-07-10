@@ -11,6 +11,31 @@ import {
   Linkedin 
 } from 'lucide-react';
 
+const services = [
+  'Virtual CFO',
+  'Controller Service',
+  'Transactional Accounting',
+  'Cloud Accounting Setup',
+  'Financial Reporting and Analysis',
+  'Tax Preparation and Planning',
+  'Compliance and Audit Support',
+  'Business Advisory Service',
+];
+
+const industries = [
+  { label: 'Retail & E-Commerce', hash: 'retail' },
+  { label: 'Healthcare & Medical', hash: 'healthcare' },
+  { label: 'Construction & Contracting', hash: 'construction' },
+  { label: 'Technology & SaaS', hash: 'technology' },
+  { label: 'Professional Services', hash: 'professional' },
+  { label: 'Nonprofit & Associations', hash: 'nonprofit' },
+];
+
+const resources = [
+  { label: 'Latest Blog', hash: 'latest-blog' },
+  { label: 'FAQs', hash: 'faqs' },
+];
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-blue-950 text-white">
@@ -18,10 +43,6 @@ const Footer: React.FC = () => {
         {/* Company Logo and Description */}
         <div className="mb-12">
           <div className="flex items-center mb-6">
-            {/* <Calculator 
-              size={40} 
-              className="text-blue-400 mr-3" 
-            /> */}
             <span className="text-2xl font-bold">SINGHAL NITIN ASSOCIATES</span>
           </div>
           <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
@@ -31,65 +52,24 @@ const Footer: React.FC = () => {
 
         {/* Main Footer Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          
+
           {/* ACCOUNTING SERVICES */}
           <div>
             <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
               Accounting Services
             </h3>
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-3">Controller Services</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <Link 
-                      to="/services" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Day-to-Day Financials
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      to="/services" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Analytics
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-3">Consulting</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <Link 
-                      to="/services" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Personalized financial assessment
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      to="/services" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Growth planning guidance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      to="/services" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Tax-saving strategies
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service}>
+                  <Link 
+                    to={`/services?name=${encodeURIComponent(service)}`}
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {service}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* INDUSTRIES */}
@@ -97,51 +77,18 @@ const Footer: React.FC = () => {
             <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
               Industries
             </h3>
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-3">Small Businesses</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <Link 
-                      to="/industries" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Retail Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      to="/industries" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Professional Services
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-3">Enterprise</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <Link 
-                      to="/industries" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Manufacturing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      to="/industries" 
-                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                    >
-                      Technology
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ul className="space-y-2">
+              {industries.map((industry) => (
+                <li key={industry.hash}>
+                  <Link 
+                    to={`/industries#${industry.hash}`}
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {industry.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* RESOURCES */}
@@ -149,23 +96,17 @@ const Footer: React.FC = () => {
             <h3 className="text-orange-400 text-sm font-bold tracking-wider mb-6 uppercase">
               Resources
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  to="/resources" 
-                  className="text-white font-medium hover:text-blue-400 transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/resources" 
-                  className="text-white font-medium hover:text-blue-400 transition-colors"
-                >
-                  FAQs
-                </Link>
-              </li>
+            <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.hash}>
+                  <Link 
+                    to={`/resources#${resource.hash}`}
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {resource.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -248,7 +189,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Copyright */}
         <div className="pt-6 text-center border-t border-blue-800">
           <p className="text-gray-400 text-sm">

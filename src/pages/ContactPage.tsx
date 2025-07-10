@@ -19,7 +19,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <Phone size={24} className="text-primary-500" />,
       title: "Phone Number",
-      details: "+1 (555) 123-4567"
+      details: "+91 99282 83543"
     },
     {
       icon: <Mail size={24} className="text-primary-500" />,
