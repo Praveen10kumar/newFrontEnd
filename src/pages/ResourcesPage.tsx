@@ -51,7 +51,14 @@ const ResourcesPage: React.FC = () => {
       author: "Emma Walker",
       date: "July 15, 2025",
       readTime: "6 min read",
-      category: "Bookkeeping"
+      category: "Bookkeeping",
+      fullContent: "1. Keep Personal and Business Finances Separate: One of the most crucial steps in bookkeeping is maintaining clear boundaries between personal and business expenses. This separation not only makes tax preparation easier but also provides a clearer picture of your business's financial health.\n\n2. Track Every Transaction: Document all income and expenses, no matter how small. This includes cash transactions, digital payments, and any business-related purchases. Use accounting software or apps to make this process more efficient.\n\n3. Reconcile Bank Statements Monthly: Regular reconciliation helps you catch errors early and ensures your books match your bank records. Set aside time each month to review and reconcile all accounts.\n\n4. Organize Your Receipts: Keep both physical and digital receipts organized by category and date. Consider using receipt scanning apps or cloud storage to maintain digital copies.\n\n5. Set Up a Chart of Accounts: Create a comprehensive chart of accounts that reflects your business structure. This will make categorizing transactions more consistent and reporting more accurate.\n\n6. Monitor Cash Flow: Keep a close eye on your cash flow by tracking when money comes in and goes out. This helps you make informed decisions about expenses and growth opportunities.\n\n7. Prepare for Tax Season: Stay organized throughout the year by maintaining proper records and setting aside money for taxes. Consider working with a professional accountant for complex tax situations.\n\n8. Use Accounting Software: Invest in reliable accounting software that suits your business size and needs. Popular options include QuickBooks, Xero, and Wave.\n\n9. Regular Financial Reviews: Schedule monthly or quarterly reviews of your financial reports to assess your business performance and identify areas for improvement.\n\n10. Backup Your Data: Regularly backup your financial data to prevent loss due to technical issues or security breaches. Use cloud-based solutions for added security.",
+      tags: ["Bookkeeping", "Small Business", "Financial Management", "Tax Preparation", "Cash Flow"],
+      relatedLinks: [
+        { title: "QuickBooks for Small Business", url: "https://quickbooks.intuit.com/small-business/" },
+        { title: "IRS Small Business Tax Guide", url: "https://www.irs.gov/businesses/small-businesses-self-employed" },
+        { title: "Small Business Administration Resources", url: "https://www.sba.gov/business-guide/manage-your-business/manage-business-finances" }
+      ]
     },
     {
       title: "How to Choose the Right Accounting Software",
@@ -60,7 +67,14 @@ const ResourcesPage: React.FC = () => {
       author: "Liam Patel",
       date: "July 1, 2025",
       readTime: "7 min read",
-      category: "Technology"
+      category: "Technology",
+      fullContent: "Choosing the right accounting software is crucial for your business's financial management success. With numerous options available, it's important to understand what features matter most for your specific needs.\n\nQuickBooks Online: The most popular choice for small to medium businesses, QuickBooks offers comprehensive features including invoicing, expense tracking, payroll integration, and extensive third-party app integrations. It's user-friendly and offers excellent customer support.\n\nXero: Known for its clean interface and strong bank reconciliation features, Xero is particularly popular with accountants and bookkeepers. It offers unlimited users on all plans and has excellent mobile apps.\n\nWave: A free accounting software that's perfect for very small businesses and freelancers. While it has fewer features than paid alternatives, it covers the basics well and integrates with Wave's payment processing services.\n\nSage Business Cloud: Offers scalable solutions from basic bookkeeping to enterprise-level accounting. It's particularly strong in inventory management and has good industry-specific features.\n\nZoho Books: Part of the larger Zoho ecosystem, this software integrates well with other Zoho applications. It's competitively priced and offers good automation features.\n\nKey factors to consider when choosing:\n- Business size and complexity\n- Industry-specific needs\n- Integration requirements\n- Budget constraints\n- User experience and learning curve\n- Customer support quality\n- Scalability for future growth\n\nTake advantage of free trials to test different platforms before making your decision. Consider involving your accountant or bookkeeper in the selection process, as they'll be working with the software regularly.",
+      tags: ["Accounting Software", "QuickBooks", "Xero", "Technology", "Business Tools"],
+      relatedLinks: [
+        { title: "QuickBooks vs Xero Comparison", url: "https://quickbooks.intuit.com/compare/quickbooks-vs-xero/" },
+        { title: "Small Business Software Reviews", url: "https://www.softwareadvice.com/accounting/" },
+        { title: "Accounting Software Buying Guide", url: "https://www.capterra.com/accounting-software/" }
+      ]
     },
     {
       title: "Understanding Financial Statements: A Beginner’s Guide",
@@ -87,7 +101,14 @@ const ResourcesPage: React.FC = () => {
       author: "Natalie Brooks",
       date: "May 15, 2025",
       readTime: "7 min read",
-      category: "Cash Flow"
+      category: "Cash Flow",
+      fullContent: "Cash flow is the lifeblood of any business. Even profitable companies can fail if they can't manage their cash flow effectively. Here's how to master this critical aspect of business finance.\n\nUnderstanding Cash Flow vs. Profit: Profit is the difference between revenue and expenses on paper, while cash flow represents the actual money moving in and out of your business. You can be profitable on paper but still face cash flow problems if customers pay slowly or you tie up too much money in inventory.\n\nCreating Cash Flow Projections: Develop 13-week rolling cash flow forecasts that predict your cash position. Include all expected income and expenses, noting when payments are actually expected to be received or made. Update these projections weekly for accuracy.\n\nAccelerating Receivables: Implement strategies to get paid faster:\n- Offer early payment discounts (2/10 net 30)\n- Require deposits or partial payments upfront\n- Use electronic invoicing and payment systems\n- Follow up on overdue accounts promptly\n- Consider factoring for immediate cash\n\nManaging Payables Strategically: While you want to pay bills on time, you can optimize timing:\n- Take advantage of payment terms without damaging relationships\n- Negotiate better terms with suppliers\n- Pay by credit card for additional float (if no fees)\n- Consider early payment discounts only if they make financial sense\n\nInventory Management: Excess inventory ties up cash unnecessarily:\n- Use just-in-time ordering when possible\n- Implement inventory management systems\n- Regularly review and remove slow-moving items\n- Consider consignment arrangements\n\nBuilding Cash Reserves: Maintain a cash cushion for unexpected expenses or opportunities:\n- Aim for 3-6 months of operating expenses in reserve\n- Use high-yield savings accounts or money market funds\n- Consider a business line of credit for additional flexibility\n\nRegular cash flow management prevents crisis situations and provides the foundation for sustainable business growth.",
+      tags: ["Cash Flow", "Financial Management", "Business Finance", "Liquidity", "Working Capital"],
+      relatedLinks: [
+        { title: "Cash Flow Management Guide", url: "https://www.sba.gov/business-guide/manage-your-business/manage-business-finances" },
+        { title: "Invoice Factoring Information", url: "https://www.investopedia.com/terms/f/factor.asp" },
+        { title: "Business Credit Lines", url: "https://www.nerdwallet.com/article/small-business/business-line-of-credit" }
+      ]
     },
     {
       title: "Why Monthly Reconciliation Is Crucial for Your Business",

@@ -63,6 +63,7 @@ const Footer: React.FC = () => {
                 <li key={service}>
                   <Link 
                     to={`/services?name=${encodeURIComponent(service)}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
                   >
                     {service}
@@ -119,6 +120,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/about" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
                   About
@@ -127,14 +129,16 @@ const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/contact" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
-                  Contact 
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link 
                   to="/referral" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-white font-medium hover:text-blue-400 transition-colors"
                 >
                   Referral Program
